@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MiQqvNwtBI+qVHVnuCwAqI+qKy7BZvotMMyMVr1v7Rjdx32Ni62AVJdJMT4QYhrfsvX+2J4qGEOd440I9pcYyA==",
+  "dgSpecHash": "tK9h4d78iaOGdvkpHpMz+wb59qEbOc5RGf8dL3cx++ViJCn+u16Py9m3iq+j7i+BcGelp6H0BGgJk4fyRDlW0A==",
   "success": true,
-  "projectFilePath": "D:\\Documentos\\2021-2\\Backend-Aplicaciones WEB\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
+  "projectFilePath": "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v2\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
