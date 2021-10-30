@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GrupoWebBackend.DomainAdvertisements.Repositories;
+using GrupoWebBackend.DomainAdvertisements.Services;
 using GrupoWebBackend.DomainPets.Repositories;
 using GrupoWebBackend.DomainPets.Services;
 using GrupoWebBackend.Persistence.Context;
@@ -43,6 +45,8 @@ namespace GrupoWebBackend
             });
             services.AddScoped<IPetRepository, PetRepository>();
             services.AddScoped<IPetService, PetService>();
+            services.AddScoped<IAdvertisementRepository, AdvertisementRepository>();
+            //services.AddScoped<IAdvertisementService, AdvertisementService>();
             services.AddAutoMapper(typeof(Startup));
         }
 
