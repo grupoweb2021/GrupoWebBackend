@@ -1,4 +1,7 @@
-﻿namespace GrupoWebBackend.DomainPets.Models
+﻿using System.Collections.Generic;
+using GrupoWebBackend.DomainAdvertisements.Models;
+
+namespace GrupoWebBackend.DomainPets.Models
 {
     public class User
     {
@@ -18,6 +21,7 @@
         
         public int PetId { get; set; }
         public Pet Pet { get; set; }
-        
+        public Advertisement Advertisement { get; set; }
+       
     }
 }
