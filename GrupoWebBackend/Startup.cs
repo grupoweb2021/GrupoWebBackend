@@ -6,6 +6,8 @@ using GrupoWebBackend.DomainAdvertisements.Repositories;
 using GrupoWebBackend.DomainAdvertisements.Services;
 using GrupoWebBackend.DomainPets.Repositories;
 using GrupoWebBackend.DomainPets.Services;
+using GrupoWebBackend.DomainPublications.Repositories;
+using GrupoWebBackend.DomainPublications.Services;
 using GrupoWebBackend.Persistence.Context;
 using GrupoWebBackend.Persistence.Repositories;
 using GrupoWebBackend.Services;
@@ -46,7 +48,9 @@ namespace GrupoWebBackend
             services.AddScoped<IPetRepository, PetRepository>();
             services.AddScoped<IPetService, PetService>();
             services.AddScoped<IAdvertisementRepository, AdvertisementRepository>();
-            //services.AddScoped<IAdvertisementService, AdvertisementService>();
+            services.AddScoped<IPublicationRepository, PublicationRepository>();
+            //services.AddScoped<IPublicationService, PublicationService>();
+                //services.AddScoped<IAdvertisementService, AdvertisementService>();
             services.AddAutoMapper(typeof(Startup));
         }
 

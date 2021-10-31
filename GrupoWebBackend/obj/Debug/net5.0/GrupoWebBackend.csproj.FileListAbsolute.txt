@@ -112,3 +112,42 @@ D:\Documentos\2021-2\Backend-Aplicaciones web-Versiones\v2\GrupoWebBackend\Grupo
 D:\Documentos\2021-2\Backend-Aplicaciones web-Versiones\v2\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\ref\GrupoWebBackend.dll
 D:\Documentos\2021-2\Backend-Aplicaciones web-Versiones\v2\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.pdb
 D:\Documentos\2021-2\Backend-Aplicaciones web-Versiones\v2\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.genruntimeconfig.cache
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\appsettings.Development.json
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\appsettings.json
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\GrupoWebBackend.exe
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\GrupoWebBackend.deps.json
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\GrupoWebBackend.runtimeconfig.json
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\GrupoWebBackend.runtimeconfig.dev.json
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\GrupoWebBackend.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\ref\GrupoWebBackend.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\GrupoWebBackend.pdb
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\AutoMapper.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Humanizer.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Microsoft.OpenApi.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.csprojAssemblyReference.cache
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.GeneratedMSBuildEditorConfig.editorconfig
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.AssemblyInfoInputs.cache
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.AssemblyInfo.cs
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.csproj.CoreCompileInputs.cache
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.MvcApplicationPartsAssemblyInfo.cs
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.MvcApplicationPartsAssemblyInfo.cache
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\staticwebassets\GrupoWebBackend.StaticWebAssets.Manifest.cache
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\staticwebassets\GrupoWebBackend.StaticWebAssets.xml
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\scopedcss\bundle\GrupoWebBackend.styles.css
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.RazorTargetAssemblyInfo.cache
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.csproj.CopyComplete
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\ref\GrupoWebBackend.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.pdb
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend\obj\Debug\net5.0\GrupoWebBackend.genruntimeconfig.cache
