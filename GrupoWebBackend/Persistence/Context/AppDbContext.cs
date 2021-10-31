@@ -1,5 +1,6 @@
 ﻿using GrupoWebBackend.DomainAdvertisements.Models;
 using GrupoWebBackend.DomainPets.Models;
+using GrupoWebBackend.DomainPublications.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace GrupoWebBackend.Persistence.Context
@@ -13,6 +14,9 @@ namespace GrupoWebBackend.Persistence.Context
         public DbSet<Pet> Pets { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Advertisement>Advertisements { get; set; }
+        
+        
+        public DbSet<Publication>Publications { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -36,6 +40,14 @@ namespace GrupoWebBackend.Persistence.Context
             builder.Entity<Advertisement>().Property(p => p.Discount);
             builder.Entity<Advertisement>().Property(p => p.Title).HasMaxLength(70).IsRequired();
             builder.Entity<Advertisement>().Property(p => p.UserId).IsRequired();
+            //Publications Constraints
+            builder.Entity<Publication>().ToTable("Publications");
+            builder.Entity<Publication>().HasKey(p => p.Id);
+            builder.Entity<Publication>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Publication>().Property(p => p.dateTime).IsRequired();
+            builder.Entity<Publication>().Property(p => p.userId).IsRequired();
+            builder.Entity<Publication>().Property(p => p.petId).IsRequired();
+            builder.Entity<Publication>().Property(p => p.comment).HasMaxLength(70).IsRequired();
             
             // Pet Relations
             builder.Entity<Pet>().HasOne(p => p.User)
@@ -45,6 +57,16 @@ namespace GrupoWebBackend.Persistence.Context
             builder.Entity<Advertisement>().HasOne(p => p.User)
                 .WithOne(p => p.Advertisement)
                 .HasForeignKey<Advertisement>(p => p.UserId);
+            
+            //User Relationships
+            builder.Entity<User>().HasMany(p => p.Publications)
+                .WithOne(p => p.user)
+                .HasForeignKey(p => p.userId);
+            //Publication Relations
+            builder.Entity<Publication>().HasOne(p => p.pet)
+                .WithOne(p => p.Publication)
+                .HasForeignKey<Publication>(p => p.petId);
+                
 
             // Pet Sample Data
             builder.Entity<Pet>().HasData
@@ -58,7 +80,7 @@ namespace GrupoWebBackend.Persistence.Context
                     Race = "Caninus",
                     Age = 2,
                     IsAdopted = true,
-                    UserId = 0
+                    UserId = -1
                 }
             );
            //Advertisement Sample Data
@@ -67,7 +89,7 @@ namespace GrupoWebBackend.Persistence.Context
                new Advertisement
                {
                    Id= 0,
-                   UserId = 1,
+                   UserId = -1,
                    DateTime= "29/09/2021 16:20",
                    Title = "this is a title",
                    Description = "add description",
@@ -76,7 +98,20 @@ namespace GrupoWebBackend.Persistence.Context
                    Promoted = true
                }
            );
-
+           //User SampleData
+          
+           //Publications SampleData
+           builder.Entity<Publication>().HasData
+           (
+               new Publication()
+               {
+                   Id = 0,
+                   userId = -1,
+                   dateTime = "29/09/2021 16:20",
+                   petId = -1,
+                   comment = "this is a comment"
+               }
+           );
         }
         
     }

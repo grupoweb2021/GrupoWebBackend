@@ -1,0 +1,9 @@
+﻿namespace GrupoWebBackend.Resources
+{
+    public class PublicationResource
+    {
+        public int Id { get; set; }
+        public string dateTime { get; set; }
+        public string comment { get; set; }
+    }
+}

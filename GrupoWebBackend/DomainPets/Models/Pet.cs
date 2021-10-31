@@ -1,4 +1,6 @@
-﻿namespace GrupoWebBackend.DomainPets.Models
+﻿using GrupoWebBackend.DomainPublications.Models;
+
+namespace GrupoWebBackend.DomainPets.Models
 {
     public class Pet
     {
@@ -12,5 +14,8 @@
 
         public int UserId;
         public User User { get; set; }
+
+        public int PublicationId;
+        public Publication Publication;
     }
 }
