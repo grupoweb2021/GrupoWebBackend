@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using GrupoWebBackend.DomainPets.Models;
 using GrupoWebBackend.DomainPets.Repositories;
 using GrupoWebBackend.DomainPets.Services;
+using GrupoWebBackend.DomainPets.Services.Communications;
 
 namespace GrupoWebBackend.Services
 {
@@ -18,6 +19,12 @@ namespace GrupoWebBackend.Services
         public async Task<IEnumerable<Pet>> ListPetAsync()
         {
             return await _petRepository.ListPetAsync();
+        }
+
+        public async Task<PetResponse> SaveAsync(Pet pet)
+        {
+            await _petRepository.AddAsync(pet);
+            return new PetResponse(pet);
         }
     }
 }
