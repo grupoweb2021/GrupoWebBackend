@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ricar\\Desktop\\Nueva carpeta (2)\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj": {}
+    "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v3\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ricar\\Desktop\\Nueva carpeta (2)\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj": {
+    "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v3\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ricar\\Desktop\\Nueva carpeta (2)\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
+        "projectUniqueName": "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v3\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
         "projectName": "GrupoWebBackend",
-        "projectPath": "C:\\Users\\ricar\\Desktop\\Nueva carpeta (2)\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
-        "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ricar\\Desktop\\Nueva carpeta (2)\\GrupoWebBackend\\GrupoWebBackend\\obj\\",
+        "projectPath": "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v3\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v3\\GrupoWebBackend\\GrupoWebBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
