@@ -65,6 +65,7 @@ namespace GrupoWebBackend.Controllers
             return Ok(categoryResource);
             
         }
+     
         [HttpDelete(template:"{id}")]
         public async Task<IActionResult>DeleteAsync(int id)
         {

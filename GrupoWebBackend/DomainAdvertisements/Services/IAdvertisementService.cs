@@ -11,7 +11,6 @@ namespace GrupoWebBackend.DomainAdvertisements.Services
         Task<IEnumerable<Advertisement>> ListByUserId(int userId);
         Task<AdvertisementResponse> SaveAsync(Advertisement advertisement);
         Task<AdvertisementResponse> UpdateAsync(int id, Advertisement advertisement);
-
         Task<AdvertisementResponse> DeleteAsync(int id);
     }
 }

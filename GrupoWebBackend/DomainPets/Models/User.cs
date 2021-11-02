@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using GrupoWebBackend.DomainAdvertisements.Models;
 using GrupoWebBackend.DomainPublications.Models;
-
+using GrupoWebBackend.DomainAdoptionsRequests.Models;
 namespace GrupoWebBackend.DomainPets.Models
 {
     public class User
@@ -24,5 +24,8 @@ namespace GrupoWebBackend.DomainPets.Models
         public Pet Pet { get; set; }
         public Advertisement Advertisement { get; set; }
         public IList<Publication> Publications { get; set; }=new List<Publication>();
+        public AdoptionsRequests AdoptionsRequests { get; set; }
+
+        public int AdoptionsRequestsId { get; set; }
     }
 }
