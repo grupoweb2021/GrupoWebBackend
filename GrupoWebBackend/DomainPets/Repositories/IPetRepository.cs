@@ -9,7 +9,9 @@ namespace GrupoWebBackend.DomainPets.Repositories
 {
     public interface IPetRepository
     { 
-        Task<IEnumerable<Pet>> ListPetAsync();
+        Task<IEnumerable<Pet>> ListAsync();
         Task AddAsync(Pet pet);
+        Task<PetResponse> DeleteAsync(Pet pet);
+        Task<Pet> FindAsync(int id);
     }
 }

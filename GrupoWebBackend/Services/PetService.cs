@@ -16,15 +16,26 @@ namespace GrupoWebBackend.Services
             _petRepository = petRepository;
         }
 
-        public async Task<IEnumerable<Pet>> ListPetAsync()
+        public async Task<IEnumerable<Pet>> ListAsync()
         {
-            return await _petRepository.ListPetAsync();
+            return await _petRepository.ListAsync();
         }
-
+        public async Task<PetResponse> FindAsync(int id)
+        {
+            return new PetResponse(await _petRepository.FindAsync(id));
+        }
         public async Task<PetResponse> SaveAsync(Pet pet)
         {
             await _petRepository.AddAsync(pet);
             return new PetResponse(pet);
         }
+
+        Task<PetResponse> IPetService.DeleteAsync(Pet pet)
+        {
+            throw new System.NotImplementedException();
+        }
+
+
+        
     }
 }
