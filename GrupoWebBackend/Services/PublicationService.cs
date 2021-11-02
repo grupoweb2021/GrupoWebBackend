@@ -12,13 +12,13 @@ namespace GrupoWebBackend.Services
     public class PublicationService:IPublicationService
     {
         private readonly IPublicationRepository _publicationRepository;
-        private readonly IUserRepository _userRepository;
+        //private readonly IUserRepository _userRepository;
 
 
-        public PublicationService(IPublicationRepository publicationRepository, IUserRepository userRepository)
+        public PublicationService(IPublicationRepository publicationRepository)
         {
             _publicationRepository = publicationRepository;
-            _userRepository = userRepository;
+            //_userRepository = userRepository;
         }
         public async Task<IEnumerable<Publication>> ListPublicationAsync()
         {

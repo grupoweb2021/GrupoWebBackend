@@ -9,36 +9,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0946c3-99d2-4862-9b43-d9f983b1f871" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Repositories/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/Communications/BaseResponseA.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/Communications/SavePetResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Persistence/Repositories/UnitOfWork.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Controllers/UserAdvertisementController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Controllers/UsersController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/Communications/UserResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/IUserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Resources/SaveUserResource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Services/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Controllers/PetsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Controllers/PetsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Models/Pet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Models/Pet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Repositories/IPetRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Repositories/IPetRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/Communications/PetResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/IPetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/IPetService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Controllers/AdvertisementsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Controllers/AdvertisementsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Controllers/PublicationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Controllers/PublicationsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Repositories/IUserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Mapping/ModelToResourceProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Mapping/ModelToResourceProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Mapping/ResourceToModelProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Mapping/ResourceToModelProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Persistence/Context/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Persistence/Context/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Persistence/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Persistence/Repositories/BaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Persistence/Repositories/PetRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Persistence/Repositories/PetRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Resources/PetResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Resources/PetResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Resources/SavePetResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Resources/SavePetResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Services/PetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Services/PetService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Persistence/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Persistence/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Services/AdvertisementService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Services/AdvertisementService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Services/PublicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Services/PublicationService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.runtimeconfig.dev.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/ref/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/ref/GrupoWebBackend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.pdb" afterDir="false" />
@@ -72,9 +69,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb544b1cb1f04ea3b2f7f4de55167b931bfb80/74/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Repositories/IPublicationRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb544b1cb1f04ea3b2f7f4de55167b931bfb80/6B/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20CM0S19zkkzb8ojtXBL7RLMt5b" />
   <component name="ProjectLevelVcsManager">
@@ -147,6 +142,8 @@
       <workItem from="1635743694593" duration="7133000" />
       <workItem from="1635782514732" duration="7883000" />
       <workItem from="1635798406650" duration="13179000" />
+      <workItem from="1635862521202" duration="1150000" />
+      <workItem from="1635863776876" duration="8978000" />
     </task>
     <servers />
   </component>

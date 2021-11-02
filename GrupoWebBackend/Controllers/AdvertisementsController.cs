@@ -24,11 +24,11 @@ namespace GrupoWebBackend.Controllers
         }
         
         [HttpGet]
-        public async Task<IEnumerable<Advertisement>>GetAllAdvertisements()
+        public async Task<IEnumerable<AdvertisementResource>> GetAllAdvertisements()
         {
             var _advertisements = await _advertisementService.ListAdvertisementAsync();
             var resources = _mapper.Map<IEnumerable<Advertisement>, IEnumerable<AdvertisementResource>>(_advertisements);
-            return _advertisements;
+            return resources;
 
         }
         [HttpPost]
@@ -48,7 +48,7 @@ namespace GrupoWebBackend.Controllers
             var advertisementResource = _mapper.Map<Advertisement, AdvertisementResource>(result.Resource);
             return Ok(advertisementResource);
         }
-        [HttpPut (template:"{id}")]
+        [HttpPut ("{id:int}")]
         public async Task<IActionResult> PutAsync (int id, [FromBody] SaveAdvertisementResource resource)
         {
             if (!ModelState.IsValid)
@@ -66,7 +66,7 @@ namespace GrupoWebBackend.Controllers
             
         }
      
-        [HttpDelete(template:"{id}")]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult>DeleteAsync(int id)
         {
             var result = await _advertisementService.DeleteAsync(id);

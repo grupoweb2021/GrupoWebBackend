@@ -23,6 +23,7 @@ namespace GrupoWebBackend.DomainPets.Models
         public int PetId { get; set; }
         public Pet Pet { get; set; }
         public Advertisement Advertisement { get; set; }
+        public IList<Advertisement> Advertisements { get; set; } = new List<Advertisement>();
         public IList<Publication> Publications { get; set; }=new List<Publication>();
         public AdoptionsRequests AdoptionsRequests { get; set; }
 

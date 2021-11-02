@@ -23,11 +23,11 @@ namespace GrupoWebBackend.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Publication>> GetAllAdvertisements()
+        public async Task<IEnumerable<PublicationResource>> GetAllAdvertisements()
         {
             var _publications = await _publicationService.ListPublicationAsync();
             var resources = _mapper.Map<IEnumerable<Publication>, IEnumerable<PublicationResource>>(_publications);
-            return _publications;
+            return resources;
         }
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SavePublicationResource resource)

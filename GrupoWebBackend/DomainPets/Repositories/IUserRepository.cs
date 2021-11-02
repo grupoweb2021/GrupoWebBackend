@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using GrupoWebBackend.DomainPets.Models;
 
 namespace GrupoWebBackend.DomainPets.Repositories
@@ -7,5 +8,6 @@ namespace GrupoWebBackend.DomainPets.Repositories
     {
         Task AddAsync(User user);
         Task<User> FindByIdAsync(int id);
+        Task<IEnumerable<User>> ListAsync();
     }
 }

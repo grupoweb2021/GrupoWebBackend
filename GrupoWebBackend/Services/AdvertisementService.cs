@@ -14,11 +14,13 @@ namespace GrupoWebBackend.Services
     {
         private IAdvertisementRepository _advertisementRepository;
         private IUserRepository _userRepository;
+        private IUnitOfWork _unitOfWork;
        
-        public AdvertisementService(IAdvertisementRepository advertisementRepository,IUserRepository userRepository)
+        public AdvertisementService(IAdvertisementRepository advertisementRepository,IUserRepository userRepository,IUnitOfWork unitOfWork)
         {
             _advertisementRepository = advertisementRepository;
             _userRepository = userRepository;
+            _unitOfWork = unitOfWork;
         }
         public async Task<IEnumerable<Advertisement>> ListAdvertisementAsync()
         {
@@ -41,6 +43,7 @@ namespace GrupoWebBackend.Services
             try
             {
                 await _advertisementRepository.AddAsync(advertisement);
+                await _unitOfWork.CompleteAsync();
                 return new AdvertisementResponse(advertisement);
             }
             catch (Exception e)
@@ -73,6 +76,7 @@ namespace GrupoWebBackend.Services
             try
             {
                 _advertisementRepository.Update(existingAdvertisement);
+                await _unitOfWork.CompleteAsync();
                 return new AdvertisementResponse(existingAdvertisement);
             }
             catch(Exception e)
@@ -89,6 +93,7 @@ namespace GrupoWebBackend.Services
             try
             {
                 _advertisementRepository.Remove(existingAdvertisement);
+                await _unitOfWork.CompleteAsync();
                 return new AdvertisementResponse(existingAdvertisement);
 
             }

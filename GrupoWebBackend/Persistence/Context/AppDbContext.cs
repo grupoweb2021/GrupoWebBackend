@@ -80,6 +80,7 @@ namespace GrupoWebBackend.Persistence.Context
             builder.Entity<User>().HasMany(p => p.Publications)
                 .WithOne(p => p.user)
                 .HasForeignKey(p => p.userId);
+         
             
             //Publication Relations
             builder.Entity<Publication>().HasOne(p => p.pet)
@@ -90,7 +91,23 @@ namespace GrupoWebBackend.Persistence.Context
             builder.Entity<AdoptionsRequests>().HasOne(p => p.User)
                 .WithOne(p => p.AdoptionsRequests)
                 .HasForeignKey<AdoptionsRequests>(p => p.UserId);
-                
+            builder.Entity<User>().HasData(
+                new User
+                {
+          Id=1,
+          Type="VET",
+          UserNick="Frank",
+          Pass="Don't know",
+          Ruc="A12345rf",
+          Dni="70258688",
+         Phone="946401234",
+         Email="frank@outlook.com",
+         Name ="Francisco",
+         LastName="Voularte",
+         //LocationId=-1,
+         PetId=100
+                }
+            );
             // Pet Sample Data
             builder.Entity<Pet>().HasData
             (
@@ -124,7 +141,7 @@ namespace GrupoWebBackend.Persistence.Context
                new Advertisement
                {
                    Id= 1,
-                   UserId = -1,
+                   UserId = 1,
                    DateTime= "29/09/2021 16:20",
                    Title = "this is a title",
                    Description = "add description",
@@ -141,9 +158,9 @@ namespace GrupoWebBackend.Persistence.Context
                new Publication()
                {
                    Id = 1,
-                   userId = -1,
+                   userId = 1,
                    dateTime = "29/09/2021 16:20",
-                   petId = -1,
+                   petId = 101,
                    comment = "this is a comment"
                }
            );
