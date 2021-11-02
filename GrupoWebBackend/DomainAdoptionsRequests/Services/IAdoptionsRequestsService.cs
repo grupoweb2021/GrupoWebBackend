@@ -9,7 +9,7 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Services
     {
         Task<IEnumerable<AdoptionsRequests>> ListAdoptionsRequestsAsync();
 
-        Task<IEnumerable<AdoptionsRequests>> ListByUserId(int userId);
+      //  Task<IEnumerable<AdoptionsRequests>> ListByUserId(int userId);
 
         Task<AdoptionsRequestsResponse> SaveAsync(AdoptionsRequests adoptionsRequest);
 
