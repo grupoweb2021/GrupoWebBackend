@@ -22,32 +22,39 @@ namespace GrupoWebBackend.Controllers
             _mapper = mapper;
             _petService = petService;
         }
-        
+
         [HttpGet]
-        public async Task<IEnumerable<PetResource>> GetAllPetsAsync()
+        public async Task<IEnumerable<Pet>> ListAsync()
         {
-            var pets = await _petService.ListPetAsync();
-            var resources = _mapper.Map<IEnumerable<Pet>, IEnumerable<PetResource>>(pets);
-            return resources;
+            var pets = await _petService.ListAsync();
+            return pets;
         }
-        
+
+        [HttpGet("{id:int}")]
+        public async Task<Pet> FindAsync(int id)
+        {
+            var pet = await _petService.FindAsync(id);
+            return pet;
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SavePetResource resource)
         {
             if (!ModelState.IsValid)
-            
                 return BadRequest(ModelState.GetErrorMessages());
-
+            
             var pet = _mapper.Map<SavePetResource, Pet>(resource);
-            var result = await _petService.SaveAsync(pet);
-
-            if (!result.Success)
+            var result = await _petService.AddAsync(pet);
+            
+            if (!result.Succces)
                 return BadRequest(result.Message);
-
-
-            var petResource = _mapper.Map<Pet, PetResource>(result.Resource);
+            
+            var petResource = _mapper.Map<Pet, PetResource>(result.Pet);
             return Ok(petResource);
         }
+        
+        
         
     }
 }

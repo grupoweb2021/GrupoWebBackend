@@ -6,7 +6,7 @@
         public string Type { get; set; }
         public string Name { get; set; }
         public string Attention { get; set; }
-        public string Age { get; set; }
+        public int Age { get; set; }
         public string Race { get; set; }
         public bool IsAdopted { get; set; }
     }

@@ -7,8 +7,9 @@ namespace GrupoWebBackend.DomainPets.Services
 {
     public interface IPetService
     {
-        Task<IEnumerable<Pet>> ListPetAsync();
-        Task<PetResponse> SaveAsync(Pet publication);
+        Task<IEnumerable<Pet>> ListAsync();
+        Task<Pet> FindAsync(int id);
+        Task<SavePetResponse> AddAsync(Pet publication);
 
     }
     
