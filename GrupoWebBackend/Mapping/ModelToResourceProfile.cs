@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using GrupoWebBackend.DomainPets.Models;
+using GrupoWebBackend.Resources;
 
 namespace GrupoWebBackend.Mapping
 {
@@ -6,6 +8,7 @@ namespace GrupoWebBackend.Mapping
     {
         public ModelToResourceProfile()
         {
+            CreateMap<Pet, PetResource>();
         }
     }
 }

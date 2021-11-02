@@ -14,15 +14,21 @@ namespace GrupoWebBackend.Persistence.Repositories
         {
         }
 
-        public async Task<IEnumerable<Pet>> ListPetAsync()
+        public async Task<IEnumerable<Pet>> ListAsync()
         {
             return await _context.Pets.ToListAsync();
         }
-        
-
+        public async Task<Pet> FindAsync(int id)
+        {
+            return await _context.Pets.FindAsync(id);   
+        }
         public async Task AddAsync(Pet pet)
         {
             await _context.Pets.AddAsync(pet);
         }
+
+
+
+        
     }
 }

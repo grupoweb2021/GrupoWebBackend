@@ -11,11 +11,10 @@ namespace GrupoWebBackend.DomainPets.Models
         public int Age { get; set; }
         public string Race { get; set; }
         public bool IsAdopted { get; set; }
-
-        public int UserId;
+        public int UserId { get; set; }
         public User User { get; set; }
-
-        public int PublicationId;
-        public Publication Publication;
+        
+        public int PublicationId { get; set; }
+        public Publication Publication { get; set; }
     }
 }

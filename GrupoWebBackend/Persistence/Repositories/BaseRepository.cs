@@ -2,7 +2,7 @@
 
 namespace GrupoWebBackend.Persistence.Repositories
 {
-    public class BaseRepository
+    public abstract class BaseRepository
     {
         protected readonly AppDbContext _context;
         

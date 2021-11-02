@@ -21,9 +21,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using GrupoWebBackend.DomainAdoptionsRequests.Models;
 
 namespace GrupoWebBackend
 {
@@ -40,14 +38,15 @@ namespace GrupoWebBackend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseInMemoryDatabase("GrupoWebBackend-api-in-memory");
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "GrupoWebBackend", Version = "v1"});
             });
-            services.AddDbContext<AppDbContext>(options =>
-            {
-                options.UseInMemoryDatabase("supermarket-api-in-memory");
-            });
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IPetRepository, PetRepository>();
             services.AddScoped<IPetService, PetService>();
             services.AddScoped<IAdvertisementRepository, AdvertisementRepository>();

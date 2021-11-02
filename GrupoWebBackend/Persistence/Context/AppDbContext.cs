@@ -15,7 +15,6 @@ namespace GrupoWebBackend.Persistence.Context
         public DbSet<User> Users { get; set; }
         public DbSet<Advertisement>Advertisements { get; set; }
         public DbSet<Publication>Publications { get; set; }
-
         public DbSet<AdoptionsRequests> AdoptionsRequests { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -27,9 +26,15 @@ namespace GrupoWebBackend.Persistence.Context
             builder.Entity<Pet>().HasKey(p => p.Id);
             builder.Entity<Pet>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Pet>().Property(p => p.Type).IsRequired();
+            builder.Entity<Pet>().Property(p => p.Name).IsRequired();
             builder.Entity<Pet>().Property(p => p.Attention).IsRequired();
+            builder.Entity<Pet>().Property(p => p.Age).IsRequired();
             builder.Entity<Pet>().Property(p => p.Race).IsRequired();
             builder.Entity<Pet>().Property(p => p.IsAdopted).IsRequired();
+            
+            
+            
+            
             //Advertisement Constraints
             builder.Entity<Advertisement>().ToTable("Advertisements");
             builder.Entity<Advertisement>().HasKey(p => p.Id);
@@ -86,28 +91,39 @@ namespace GrupoWebBackend.Persistence.Context
                 .WithOne(p => p.AdoptionsRequests)
                 .HasForeignKey<AdoptionsRequests>(p => p.UserId);
                 
-
             // Pet Sample Data
             builder.Entity<Pet>().HasData
             (
                 new Pet
                 {
-                    Id = 0,
+                    Id = 100,
                     Type = "Dog",
                     Name = "Tito",
                     Attention = "Required",
                     Race = "Caninus",
                     Age = 2,
-                    IsAdopted = true,
-                    UserId = -1
+                    IsAdopted = true
+                    // UserId = -1
+                },
+                new Pet
+                {
+                    Id = 101,
+                    Type = "Cat",
+                    Name = "Lolo",
+                    Attention = "Required",
+                    Race = "Catitus",
+                    Age = 2,
+                    IsAdopted = true
+                    // UserId = -1
                 }
             );
+            
            //Advertisement Sample Data
            builder.Entity<Advertisement>().HasData
            (
                new Advertisement
                {
-                   Id= 0,
+                   Id= 1,
                    UserId = -1,
                    DateTime= "29/09/2021 16:20",
                    Title = "this is a title",
@@ -124,7 +140,7 @@ namespace GrupoWebBackend.Persistence.Context
            (
                new Publication()
                {
-                   Id = 0,
+                   Id = 1,
                    userId = -1,
                    dateTime = "29/09/2021 16:20",
                    petId = -1,
@@ -137,7 +153,7 @@ namespace GrupoWebBackend.Persistence.Context
            builder.Entity<AdoptionsRequests>().HasData(
                new AdoptionsRequests()
                {
-                Id=0,
+                Id=1,
                 Message = "HELLO WORLD",
                 Status ="pending",
                 UserId = -1,

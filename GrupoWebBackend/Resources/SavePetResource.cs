@@ -11,10 +11,10 @@ namespace GrupoWebBackend.Resources
         [Required]
         public string Attention { get; set; }
         [Required]
-        public string Age { get; set; }
+        public int Age { get; set; }
         [Required]
         public string Race {get; set; }
         [Required]
-        public int IsAdopted {get; set; }
+        public bool IsAdopted {get; set; }
     }
 }
