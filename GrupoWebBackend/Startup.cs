@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GrupoWebBackend.DomainAdoptionsRequests.Models;
+using GrupoWebBackend.DomainAdoptionsRequests.Repositories;
 using GrupoWebBackend.DomainAdvertisements.Repositories;
 using GrupoWebBackend.DomainAdvertisements.Services;
 using GrupoWebBackend.DomainPets.Repositories;
@@ -21,6 +23,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using GrupoWebBackend.DomainAdoptionsRequests.Models;
 
 namespace GrupoWebBackend
 {
@@ -49,6 +52,7 @@ namespace GrupoWebBackend
             services.AddScoped<IPetService, PetService>();
             services.AddScoped<IAdvertisementRepository, AdvertisementRepository>();
             services.AddScoped<IPublicationRepository, PublicationRepository>();
+            services.AddScoped<IAdoptionsRequestsRepository,AdoptionsRequestsRepository>();
             //services.AddScoped<IPublicationService, PublicationService>();
                 //services.AddScoped<IAdvertisementService, AdvertisementService>();
             services.AddAutoMapper(typeof(Startup));
