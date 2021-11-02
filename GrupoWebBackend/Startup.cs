@@ -52,6 +52,7 @@ namespace GrupoWebBackend
             services.AddScoped<IPetService, PetService>();
             services.AddScoped<IPublicationRepository, PublicationRepository>();
             services.AddScoped<IAdoptionsRequestsRepository,AdoptionsRequestsRepository>();
+            services.AddScoped<IAdoptionsRequestsService,AdoptionsRequestsService>();
             services.AddScoped<IPublicationService, PublicationService>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
