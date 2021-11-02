@@ -13,11 +13,12 @@ namespace GrupoWebBackend.Services
     {
         private readonly IPublicationRepository _publicationRepository;
         //private readonly IUserRepository _userRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-
-        public PublicationService(IPublicationRepository publicationRepository)
+        public PublicationService(IPublicationRepository publicationRepository,IUnitOfWork unitOfWork)
         {
             _publicationRepository = publicationRepository;
+            _unitOfWork = unitOfWork;
             //_userRepository = userRepository;
         }
         public async Task<IEnumerable<Publication>> ListPublicationAsync()
@@ -32,6 +33,7 @@ namespace GrupoWebBackend.Services
         public async Task<PublicationResponse> SaveAsync(Publication publication)
         { 
             await _publicationRepository.AddAsync(publication);
+            await _unitOfWork.CompleteAsync();
             return new PublicationResponse(publication);
         }
 
