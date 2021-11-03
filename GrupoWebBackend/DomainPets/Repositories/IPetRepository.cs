@@ -12,6 +12,6 @@ namespace GrupoWebBackend.DomainPets.Repositories
         Task<IEnumerable<Pet>> ListAsync();
         Task<Pet> FindAsync(int id);
         Task AddAsync(Pet pet);
-
+        void UpdateAsync(Pet pet);
     }
 }

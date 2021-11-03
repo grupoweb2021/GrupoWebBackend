@@ -45,6 +45,29 @@ namespace GrupoWebBackend.Services
             }
         }
 
+        public async Task<PetResponse> UpdateAsync(Pet pet, int id)
+        {
+            var existingPet = await _petRepository.FindAsync(id);
+            if (existingPet == null)
+                return new PetResponse("Pet not found");
+            existingPet.Age = pet.Age;
+            existingPet.Attention = pet.Attention;
+            existingPet.Name = pet.Name;
+            existingPet.Race = pet.Race;
+            existingPet.Type = pet.Type;
+            existingPet.IsAdopted = pet.IsAdopted;
+
+            try
+            {
+                _petRepository.UpdateAsync(existingPet);
+                await _unitOfWork.CompleteAsync();
+                return new PetResponse(existingPet);
+            }
+            catch (Exception e)
+            {
+                return new PetResponse($"An error occurred while saving Category: {e.Message}");
+            }
+        }
     }
 }
 

@@ -27,8 +27,9 @@ namespace GrupoWebBackend.Persistence.Repositories
             await _context.Pets.AddAsync(pet);
         }
 
-
-
-        
+        public void UpdateAsync(Pet pet)
+        {
+            _context.Pets.Update(pet);
+        }
     }
 }
