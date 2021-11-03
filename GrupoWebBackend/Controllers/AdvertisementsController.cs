@@ -59,7 +59,7 @@ namespace GrupoWebBackend.Controllers
 
             if (!result.Success)
                 return BadRequest(result.Message);
-
+            
             var categoryResource = _mapper.Map<Advertisement, AdvertisementResource>(result.Resource);
 
             return Ok(categoryResource);

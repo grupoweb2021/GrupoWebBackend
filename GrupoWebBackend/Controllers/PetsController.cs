@@ -30,12 +30,12 @@ namespace GrupoWebBackend.Controllers
             return pets;
         }
 
-        [HttpGet("{id:int}")]
-        public async Task<Pet> FindAsync(int id)
-        {
-            var pet = await _petService.FindAsync(id);
-            return pet;
-        }
+        // [HttpGet("{id:int}")]
+        // public async Task<Pet> FindAsync(int id)
+        // {
+        //     var pet = await _petService.FindAsync(id);
+        //     return pet;
+        // }
 
 
         [HttpPost]
@@ -54,7 +54,23 @@ namespace GrupoWebBackend.Controllers
             return Ok(petResource);
         }
         
-        
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> PutAsync ([FromBody] SavePetResource resource, int id)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+
+            var pet = _mapper.Map<SavePetResource, Pet>(resource);
+            var result = await _petService.UpdateAsync(pet, id);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var petResource = _mapper.Map<Pet, PetResource>(result.Resource);
+
+            return Ok(petResource);
+            
+        }
         
     }
 }

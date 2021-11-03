@@ -10,6 +10,7 @@ namespace GrupoWebBackend.DomainPets.Services
         Task<IEnumerable<Pet>> ListAsync();
         Task<Pet> FindAsync(int id);
         Task<SavePetResponse> AddAsync(Pet publication);
+        Task<PetResponse> UpdateAsync(Pet pet, int id);
 
     }
     
