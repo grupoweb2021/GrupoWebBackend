@@ -17,16 +17,15 @@ namespace GrupoWebBackend.DomainPets.Models
         public string Name { get; set; }
         public string LastName { get; set; }
 
-        public int LocationId { get; set; }
-        public Location Location { get; set; }
+        public int DistrictId { get; set; }
         
-        public int PetId { get; set; }
-        public Pet Pet { get; set; }
-        public Advertisement Advertisement { get; set; }
+        public District District { get; set; }
+        
+        // public int LocationId { get; set; }
+        // public Location Location { get; set; }
+        public IList<Pet> Pets { get; set; } = new List<Pet>();
         public IList<Advertisement> Advertisements { get; set; } = new List<Advertisement>();
         public IList<Publication> Publications { get; set; }=new List<Publication>();
-        public AdoptionsRequests AdoptionsRequests { get; set; }
-
-        public int AdoptionsRequestsId { get; set; }
+        public IList<AdoptionsRequests> AdoptionsRequestsList { get; set; } = new List<AdoptionsRequests>();
     }
 }

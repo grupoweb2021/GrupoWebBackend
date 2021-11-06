@@ -26,8 +26,8 @@ namespace GrupoWebBackend.Controllers
         [HttpGet]
         public async Task<IEnumerable<AdvertisementResource>> GetAllAdvertisements()
         {
-            var _advertisements = await _advertisementService.ListAdvertisementAsync();
-            var resources = _mapper.Map<IEnumerable<Advertisement>, IEnumerable<AdvertisementResource>>(_advertisements);
+            var advertisements = await _advertisementService.ListAdvertisementAsync();
+            var resources = _mapper.Map<IEnumerable<Advertisement>, IEnumerable<AdvertisementResource>>(advertisements);
             return resources;
 
         }
