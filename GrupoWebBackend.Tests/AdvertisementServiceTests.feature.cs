@@ -19,7 +19,7 @@ namespace GrupoWebBackend.Tests
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class PetServiceTestFeature : object, Xunit.IClassFixture<PetServiceTestFeature.FixtureData>, System.IDisposable
+    public partial class AdvertisementServiceTestsFeature : object, Xunit.IClassFixture<AdvertisementServiceTestsFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace GrupoWebBackend.Tests
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "PetServiceTests.feature"
+#line 1 "AdvertisementServiceTests.feature"
 #line hidden
         
-        public PetServiceTestFeature(PetServiceTestFeature.FixtureData fixtureData, GrupoWebBackend_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public AdvertisementServiceTestsFeature(AdvertisementServiceTestsFeature.FixtureData fixtureData, GrupoWebBackend_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,8 +40,7 @@ namespace GrupoWebBackend.Tests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "PetServiceTest", "    As a Developer\r\n    I wan to add new Pet through API\r\n    So that it is avail" +
-                    "able when wanting to make publications.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "AdvertisementServiceTests", "As a vet\r\nI want to promote mi vet clinic\r\nSo that I get more clients", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -81,18 +80,18 @@ namespace GrupoWebBackend.Tests
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Add Pet")]
-        [Xunit.TraitAttribute("FeatureTitle", "PetServiceTest")]
-        [Xunit.TraitAttribute("Description", "Add Pet")]
-        [Xunit.TraitAttribute("Category", "pet-adding")]
-        public virtual void AddPet()
+        [Xunit.SkippableFactAttribute(DisplayName="Publish a vet clinic into the app")]
+        [Xunit.TraitAttribute("FeatureTitle", "AdvertisementServiceTests")]
+        [Xunit.TraitAttribute("Description", "Publish a vet clinic into the app")]
+        [Xunit.TraitAttribute("Category", "advertisement-adding")]
+        public virtual void PublishAVetClinicIntoTheApp()
         {
             string[] tagsOfScenario = new string[] {
-                    "pet-adding"};
+                    "advertisement-adding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Pet", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish a vet clinic into the app", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 7
-this.ScenarioInitialize(scenarioInfo);
+    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -112,29 +111,27 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
-    testRunner.Given("The Endpoint https://localhost:5001/api/v1/Pets is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("the endpoint https://localhost:5001/api/v1/Advertisements is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Type",
-                            "Name",
-                            "Attention",
-                            "Race",
-                            "Age",
-                            "IsAdopted",
-                            "UserId"});
-                table2.AddRow(new string[] {
-                            "Can",
-                            "Lolo",
-                            "Yes",
-                            "Pitbull",
-                            "2",
-                            "false",
-                            "1"});
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "DateTime",
+                            "Title",
+                            "Description",
+                            "Discount",
+                            "UrlToImage",
+                            "Promoted"});
+                table1.AddRow(new string[] {
+                            "29/09/2021 16:20",
+                            "this is a title",
+                            "add description",
+                            "10",
+                            "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
+                            "true"});
 #line 9
-    testRunner.When("A Post Request is sent", ((string)(null)), table2, "When ");
+        testRunner.When("an advertisement is sent", ((string)(null)), table1, "When ");
 #line hidden
 #line 12
-    testRunner.Then("A Response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then("a response with status 200 is recieved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -147,12 +144,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                PetServiceTestFeature.FeatureSetup();
+                AdvertisementServiceTestsFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                PetServiceTestFeature.FeatureTearDown();
+                AdvertisementServiceTestsFeature.FeatureTearDown();
             }
         }
     }
