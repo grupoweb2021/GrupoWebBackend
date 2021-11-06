@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YaN49F1qQJpnATfq+bzgpKxQHwHXF0yixyVg+xloijdwwndjrJTqgynJZxUU1JbMt8PuyA1EdL601fDvhnbuYw==",
+  "dgSpecHash": "nnMzpvT/dq9ymHFRsrkVq/vIyuOdwwnX2+UP95xc+ggGsJjTf2fXMEtbZ2A5RkU6tD/zt54v1h2zxQKpdpgccA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ricar\\Desktop\\Backend Web\\GrupoWebBackend\\GrupoWebBackend.Tests\\GrupoWebBackend.Tests.csproj",
   "expectedPackageFiles": [
@@ -159,10 +159,13 @@
     "C:\\Users\\ricar\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\ricar\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ricar\\.nuget\\packages\\validation\\2.4.18\\validation.2.4.18.nupkg.sha512",
-    "C:\\Users\\ricar\\.nuget\\packages\\xunit.abstractions\\2.0.2\\xunit.abstractions.2.0.2.nupkg.sha512",
-    "C:\\Users\\ricar\\.nuget\\packages\\xunit.core\\2.4.0\\xunit.core.2.4.0.nupkg.sha512",
-    "C:\\Users\\ricar\\.nuget\\packages\\xunit.extensibility.core\\2.4.0\\xunit.extensibility.core.2.4.0.nupkg.sha512",
-    "C:\\Users\\ricar\\.nuget\\packages\\xunit.extensibility.execution\\2.4.0\\xunit.extensibility.execution.2.4.0.nupkg.sha512",
+    "C:\\Users\\ricar\\.nuget\\packages\\xunit\\2.4.2-pre.12\\xunit.2.4.2-pre.12.nupkg.sha512",
+    "C:\\Users\\ricar\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\ricar\\.nuget\\packages\\xunit.analyzers\\0.10.0\\xunit.analyzers.0.10.0.nupkg.sha512",
+    "C:\\Users\\ricar\\.nuget\\packages\\xunit.assert\\2.4.2-pre.12\\xunit.assert.2.4.2-pre.12.nupkg.sha512",
+    "C:\\Users\\ricar\\.nuget\\packages\\xunit.core\\2.4.2-pre.12\\xunit.core.2.4.2-pre.12.nupkg.sha512",
+    "C:\\Users\\ricar\\.nuget\\packages\\xunit.extensibility.core\\2.4.2-pre.12\\xunit.extensibility.core.2.4.2-pre.12.nupkg.sha512",
+    "C:\\Users\\ricar\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2-pre.12\\xunit.extensibility.execution.2.4.2-pre.12.nupkg.sha512",
     "C:\\Users\\ricar\\.nuget\\packages\\xunit.skippablefact\\1.3.12\\xunit.skippablefact.1.3.12.nupkg.sha512"
   ],
   "logs": []

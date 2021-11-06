@@ -101,7 +101,7 @@ namespace GrupoWebBackend.Persistence.Context
                     Name = "Francisco",
                     LastName = "Voularte",
                     //LocationId=-1,
-                    PetId = 100
+                    //PetId = 100
                 }
             );
             // Pet Sample Data
@@ -115,8 +115,9 @@ namespace GrupoWebBackend.Persistence.Context
                     Attention = "Required",
                     Race = "Caninus",
                     Age = 2,
-                    IsAdopted = true
-                    // UserId = -1
+                    IsAdopted = true,
+                    UserId = -1,
+                    PublicationId = 2
                 },
                 new Pet
                 {
@@ -126,8 +127,9 @@ namespace GrupoWebBackend.Persistence.Context
                     Attention = "Required",
                     Race = "Catitus",
                     Age = 2,
-                    IsAdopted = true
-                    // UserId = -1
+                    IsAdopted = true,
+                    UserId = 1,
+                    PublicationId = 1
                 }
             );
 
@@ -157,6 +159,22 @@ namespace GrupoWebBackend.Persistence.Context
                     userId = 1,
                     dateTime = "29/09/2021 16:20",
                     petId = 101,
+                    comment = "this is a comment"
+                },
+                new Publication()
+                {
+                    Id = 2,
+                    userId = 1,
+                    dateTime = "29/09/2021 16:20",
+                    petId = 100,
+                    comment = "this is a comment"
+                },
+                new Publication()
+                {
+                    Id = 3,
+                    userId = 1,
+                    dateTime = "29/09/2021 16:20",
+                    petId = -1,
                     comment = "this is a comment"
                 }
             );
