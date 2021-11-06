@@ -16,5 +16,9 @@ namespace GrupoWebBackend.Resources
         public string Race {get; set; }
         [Required]
         public bool IsAdopted {get; set; }
+        [Required]
+        public int UserId { get; set; }
+        [Required]
+        public int PublicationId { get; set; }
     }
 }

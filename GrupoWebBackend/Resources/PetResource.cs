@@ -9,5 +9,7 @@
         public int Age { get; set; }
         public string Race { get; set; }
         public bool IsAdopted { get; set; }
+        public int UserId { get; set; }
+        public int PublicationId { get; set; }
     }
 }
