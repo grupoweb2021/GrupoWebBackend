@@ -43,8 +43,8 @@ namespace GrupoWebBackend.Persistence.Repositories
 
         public async Task<IEnumerable<Publication>> FindByUserId(int userId)
         {
-            return await _context.Publications.Where(p => p.userId == userId)
-                .Include(p => p.user)
+            return await _context.Publications.Where(p => p.UserId == userId)
+                .Include(p => p.User)
                 .ToListAsync();
         }
     }

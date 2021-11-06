@@ -43,10 +43,10 @@ namespace GrupoWebBackend.Services
 
             if (existingPublication == null)
                 return new PublicationResponse("Publication not Found");
-            existingPublication.comment = publication.comment;
-            existingPublication.dateTime = publication.dateTime;
-            existingPublication.petId = publication.petId;
-            existingPublication.userId = publication.userId;
+            existingPublication.Comment = publication.Comment;
+            existingPublication.DateTime = publication.DateTime;
+            existingPublication.PetId = publication.PetId;
+            existingPublication.UserId = publication.UserId;
             _publicationRepository.Update(existingPublication);
             return new PublicationResponse(existingPublication);
         }

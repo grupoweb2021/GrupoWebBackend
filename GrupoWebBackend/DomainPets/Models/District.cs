@@ -7,6 +7,6 @@ namespace GrupoWebBackend.DomainPets.Models
         public int Id { get; set; }
         public string DistrictName { get; set; }
         
-        public IList<Location> User { get; set; } = new List<Location>();
+        public IList<User> User { get; set; } = new List<User>();
     }
 }

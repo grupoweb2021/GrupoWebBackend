@@ -49,10 +49,10 @@ namespace GrupoWebBackend.Persistence.Context
             builder.Entity<Publication>().ToTable("Publications");
             builder.Entity<Publication>().HasKey(p => p.Id);
             builder.Entity<Publication>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<Publication>().Property(p => p.dateTime).IsRequired();
-            builder.Entity<Publication>().Property(p => p.userId).IsRequired();
-            builder.Entity<Publication>().Property(p => p.petId).IsRequired();
-            builder.Entity<Publication>().Property(p => p.comment).HasMaxLength(70).IsRequired();
+            builder.Entity<Publication>().Property(p => p.DateTime).IsRequired();
+            builder.Entity<Publication>().Property(p => p.UserId).IsRequired();
+            builder.Entity<Publication>().Property(p => p.PetId).IsRequired();
+            builder.Entity<Publication>().Property(p => p.Comment).HasMaxLength(70).IsRequired();
             //AdoptionsRequests
             builder.Entity<AdoptionsRequests>().ToTable("AdoptionsRequests");
             builder.Entity<AdoptionsRequests>().HasKey(p => p.Id);
@@ -61,32 +61,62 @@ namespace GrupoWebBackend.Persistence.Context
             builder.Entity<AdoptionsRequests>().Property(p => p.Message).HasMaxLength(300).IsRequired();
             builder.Entity<AdoptionsRequests>().Property(p => p.Status).IsRequired();
 
+            
+            // Districts
+            builder.Entity<District>().ToTable("Districts");
+            builder.Entity<District>().HasKey(p => p.Id);
+            builder.Entity<District>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<District>().Property(p => p.DistrictName).IsRequired();
 
+            // District Relationship
+            builder.Entity<District>().HasMany(p => p.User)
+                .WithOne(p => p.District)
+                .HasForeignKey(p => p.DistrictId);
+            
             // Pet Relations
-            builder.Entity<Pet>().HasOne(p => p.User)
-                .WithOne(p => p.Pet)
-                .HasForeignKey<Pet>(p => p.UserId);
+            builder.Entity<User>().HasMany(p => p.Pets)
+                .WithOne(p => p.User)
+                .HasForeignKey(p => p.UserId);
+            
             //Advertisement Relations
-            builder.Entity<Advertisement>().HasOne(p => p.User)
-                .WithOne(p => p.Advertisement)
-                .HasForeignKey<Advertisement>(p => p.UserId);
+            builder.Entity<User>().HasMany(p => p.Advertisements)
+                .WithOne(p => p.User)
+                .HasForeignKey(p => p.UserId);
 
             //User Relationships
             builder.Entity<User>().HasMany(p => p.Publications)
-                .WithOne(p => p.user)
-                .HasForeignKey(p => p.userId);
+                .WithOne(p => p.User)
+                .HasForeignKey(p => p.UserId);
 
             //Publication Relations
-            builder.Entity<Publication>().HasOne(p => p.pet)
+            builder.Entity<Publication>().HasMany(p => p.Pets)
                 .WithOne(p => p.Publication)
-                .HasForeignKey<Publication>(p => p.petId);
+                .HasForeignKey(p => p.PublicationId);
 
             //AdoptionsRequests Relations 
-            builder.Entity<AdoptionsRequests>().HasOne(p => p.User)
-                .WithOne(p => p.AdoptionsRequests)
-                .HasForeignKey<AdoptionsRequests>(p => p.UserId);
+            builder.Entity<Publication>().HasMany(p => p.AdoptionsRequestsList)
+                .WithOne(p => p.Publication)
+                .HasForeignKey(p => p.PublicationId);
+            
+            //AdoptionsRequests Relations 
+            builder.Entity<User>().HasMany(p => p.AdoptionsRequestsList)
+                .WithOne(p => p.User)
+                .HasForeignKey(p => p.UserId);
 
 
+            builder.Entity<District>().HasData(
+                new District
+                {
+                    Id = 1,
+                    DistrictName = "Ventanilla"
+                },
+                new District
+                {
+                    Id = 2,
+                    DistrictName = "San Miguel"
+                }
+            );
+            
             builder.Entity<User>().HasData(
                 new User
                 {
@@ -100,7 +130,7 @@ namespace GrupoWebBackend.Persistence.Context
                     Email = "frank@outlook.com",
                     Name = "Francisco",
                     LastName = "Voularte",
-                    //LocationId=-1,
+                    DistrictId = 1
                     //PetId = 100
                 }
             );
@@ -156,26 +186,26 @@ namespace GrupoWebBackend.Persistence.Context
                 new Publication()
                 {
                     Id = 1,
-                    userId = 1,
-                    dateTime = "29/09/2021 16:20",
-                    petId = 101,
-                    comment = "this is a comment"
+                    UserId = 1,
+                    DateTime = "29/09/2021 16:20",
+                    PetId = 101,
+                    Comment = "this is a comment"
                 },
                 new Publication()
                 {
                     Id = 2,
-                    userId = 1,
-                    dateTime = "29/09/2021 16:20",
-                    petId = 100,
-                    comment = "this is a comment"
+                    UserId = 1,
+                    DateTime = "29/09/2021 16:20",
+                    PetId = 100,
+                    Comment = "this is a comment"
                 },
                 new Publication()
                 {
                     Id = 3,
-                    userId = 1,
-                    dateTime = "29/09/2021 16:20",
-                    petId = -1,
-                    comment = "this is a comment"
+                    UserId = 1,
+                    DateTime = "29/09/2021 16:20",
+                    PetId = -1,
+                    Comment = "this is a comment"
                 }
             );
 

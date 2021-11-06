@@ -15,7 +15,7 @@ namespace GrupoWebBackend.Persistence.Repositories
         
         public async Task CompleteAsync()
         {
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
     }
 }

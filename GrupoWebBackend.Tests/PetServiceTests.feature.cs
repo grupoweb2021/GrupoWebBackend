@@ -115,6 +115,21 @@ this.ScenarioInitialize(scenarioInfo);
     testRunner.Given("The Endpoint https://localhost:5001/api/v1/Pets is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Id",
+                            "Type",
+                            "UserNick",
+                            "Pass",
+                            "Ruc",
+                            "Dni",
+                            "Phone",
+                            "Email",
+                            "Name",
+                            "LastName",
+                            "LocationId"});
+#line 9
+    testRunner.And("A User is already stored", ((string)(null)), table2, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Type",
                             "Name",
                             "Attention",
@@ -122,7 +137,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Age",
                             "IsAdopted",
                             "UserId"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Can",
                             "Lolo",
                             "Yes",
@@ -130,10 +145,10 @@ this.ScenarioInitialize(scenarioInfo);
                             "2",
                             "false",
                             "1"});
-#line 9
-    testRunner.When("A Post Request is sent", ((string)(null)), table2, "When ");
+#line 13
+    testRunner.When("A Post Request is sent", ((string)(null)), table3, "When ");
 #line hidden
-#line 12
+#line 16
     testRunner.Then("A Response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
