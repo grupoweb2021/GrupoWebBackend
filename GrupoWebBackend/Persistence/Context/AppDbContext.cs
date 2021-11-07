@@ -123,7 +123,7 @@ namespace GrupoWebBackend.Persistence.Context
                     Id = 1,
                     Type = "VET",
                     UserNick = "Frank",
-                    Pass = "Don't know",
+                    Pass = "Password",
                     Ruc = "A12345rf",
                     Dni = "70258688",
                     Phone = "946401234",

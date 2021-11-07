@@ -28,7 +28,7 @@ namespace GrupoWebBackend.Tests
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "PetServiceTests.feature"
+#line 1 "PetServiceTest.feature"
 #line hidden
         
         public PetServiceTestFeature(PetServiceTestFeature.FixtureData fixtureData, GrupoWebBackend_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
@@ -78,10 +78,10 @@ namespace GrupoWebBackend.Tests
         
         public virtual void FeatureBackground()
         {
+#line 5
+ #line hidden
 #line 6
-    #line hidden
-#line 7
-        testRunner.Given("The Endpoint https://localhost:5001/api/v1/Pets is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("The Endpoint https://localhost:5001/api/v1/Pets is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Id",
@@ -99,16 +99,16 @@ namespace GrupoWebBackend.Tests
                         "1",
                         "VET",
                         "Frank",
-                        "Don\'t know",
-                        "74544",
-                        "65454",
-                        "951083038",
-                        "ricaordo@gmail",
-                        "Ricardo",
-                        "Yalico",
+                        "Password",
+                        "A12345rf",
+                        "70258688",
+                        "946401234",
+                        "frank@outlook.com",
+                        "Francisco",
+                        "Voularte",
                         "1"});
-#line 8
-        testRunner.And("A User is already stored", ((string)(null)), table3, "And ");
+#line 7
+  testRunner.And("A user is already stored", ((string)(null)), table3, "And ");
 #line hidden
         }
         
@@ -127,7 +127,7 @@ namespace GrupoWebBackend.Tests
                     "pet-adding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Pet", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 13
+#line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -147,8 +147,8 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
-    this.FeatureBackground();
+#line 5
+ this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Type",
@@ -157,7 +157,8 @@ this.ScenarioInitialize(scenarioInfo);
                             "Race",
                             "Age",
                             "IsAdopted",
-                            "UserId"});
+                            "UserId",
+                            "PublicationId"});
                 table4.AddRow(new string[] {
                             "Can",
                             "Lolo",
@@ -165,12 +166,48 @@ this.ScenarioInitialize(scenarioInfo);
                             "Pitbull",
                             "2",
                             "false",
+                            "1",
                             "1"});
-#line 14
-    testRunner.When("A Post Request is sent", ((string)(null)), table4, "When ");
+#line 12
+ testRunner.When("A Post Request is sent", ((string)(null)), table4, "When ");
 #line hidden
+#line 15
+ testRunner.Then("A Response With Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Add Pet with empty data")]
+        [Xunit.TraitAttribute("FeatureTitle", "PetServiceTest")]
+        [Xunit.TraitAttribute("Description", "Add Pet with empty data")]
+        public virtual void AddPetWithEmptyData()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Pet with empty data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 17
-    testRunner.Then("A Response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+ this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Type",
@@ -179,17 +216,22 @@ this.ScenarioInitialize(scenarioInfo);
                             "Race",
                             "Age",
                             "IsAdopted",
-                            "UserId"});
+                            "UserId",
+                            "PublicationId"});
                 table5.AddRow(new string[] {
                             "Can",
                             "Lolo",
                             "Yes",
-                            "Pitbull",
+                            "",
                             "2",
                             "false",
+                            "1001",
                             "1"});
 #line 18
-    testRunner.And("A Pet Resource is incluided in Response Body", ((string)(null)), table5, "And ");
+ testRunner.When("A Post Request is sent", ((string)(null)), table5, "When ");
+#line hidden
+#line 21
+ testRunner.Then("A Response With Status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

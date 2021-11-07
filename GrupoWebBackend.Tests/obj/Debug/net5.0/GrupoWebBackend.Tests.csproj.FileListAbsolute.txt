@@ -1686,3 +1686,6 @@ E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend
 C:\Users\Dyland\Desktop\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Castle.Core.dll
 C:\Users\Dyland\Desktop\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\FluentAssertions.dll
 C:\Users\Dyland\Desktop\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Moq.dll
+C:\Users\ricar\Desktop\Backend Web\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\ricar\Desktop\Backend Web\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\FluentAssertions.dll
+C:\Users\ricar\Desktop\Backend Web\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Moq.dll

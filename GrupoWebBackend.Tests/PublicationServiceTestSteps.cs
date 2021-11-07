@@ -21,8 +21,6 @@ namespace GrupoWebBackend.Tests
         private HttpClient _client;
         private Uri _baseUri;
 
-        
-
         private ConfiguredTaskAwaitable<HttpResponseMessage> Response
         {
             get;
