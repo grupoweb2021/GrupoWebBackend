@@ -113,14 +113,14 @@ namespace GrupoWebBackend.Tests
 #line 8
         testRunner.Given("the endpoint https://localhost:5001/api/v1/Advertisements is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "DateTime",
                             "Title",
                             "Description",
                             "Discount",
                             "UrlToImage",
                             "Promoted"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "29/09/2021 16:20",
                             "this is a title",
                             "add description",
@@ -128,7 +128,7 @@ namespace GrupoWebBackend.Tests
                             "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
                             "true"});
 #line 9
-        testRunner.When("an advertisement is sent", ((string)(null)), table1, "When ");
+        testRunner.When("an advertisement is sent", ((string)(null)), table2, "When ");
 #line hidden
 #line 12
         testRunner.Then("a response with status 200 is recieved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
