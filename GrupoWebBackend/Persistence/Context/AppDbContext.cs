@@ -215,7 +215,7 @@ namespace GrupoWebBackend.Persistence.Context
                 new AdoptionsRequests()
                 {
                     Id = 1,
-                    Message = "HELLO WORLD",
+                    Message = "hola",
                     Status = "pending",
                     //UserId = -1,
                     //PublicationId = -1
