@@ -32,9 +32,21 @@ namespace GrupoWebBackend.Services
 
         public async Task<PublicationResponse> SaveAsync(Publication publication)
         { 
-            await _publicationRepository.AddAsync(publication);
-            await _unitOfWork.CompleteAsync();
-            return new PublicationResponse(publication);
+           
+            var existingUser = _publicationRepository.FindByUserId(publication.UserId);
+            if (existingUser == null)
+                return new PublicationResponse("invalid user");
+            
+            try
+            {
+                await _publicationRepository.AddAsync(publication);
+                await _unitOfWork.CompleteAsync();
+                return new PublicationResponse(publication);
+            }
+            catch (Exception e)
+            {
+                return new PublicationResponse($"An error occurred while saving the Publication: {e.Message}");
+            }
         }
 
         public async Task<PublicationResponse> UpdateAsync(int id, Publication publication)
