@@ -16,5 +16,7 @@ namespace GrupoWebBackend.Resources
         public string UrlToImage { get; set; }
         [Required]
         public bool Promoted { get; set; }
+        [Required]
+        public int UserId { get; set; }
     }
 }
