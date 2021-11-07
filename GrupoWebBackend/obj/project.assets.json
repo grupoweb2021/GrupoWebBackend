@@ -6167,23 +6167,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dyland\\.nuget\\packages\\": {},
+    "C:\\Users\\ricar\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dyland\\Desktop\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
+      "projectUniqueName": "C:\\Users\\ricar\\Desktop\\Backend Web\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
       "projectName": "GrupoWebBackend",
-      "projectPath": "C:\\Users\\Dyland\\Desktop\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
-      "packagesPath": "C:\\Users\\Dyland\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dyland\\Desktop\\GrupoWebBackend\\GrupoWebBackend\\obj\\",
+      "projectPath": "C:\\Users\\ricar\\Desktop\\Backend Web\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
+      "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ricar\\Desktop\\Backend Web\\GrupoWebBackend\\GrupoWebBackend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dyland\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

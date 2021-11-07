@@ -5,6 +5,7 @@ using GrupoWebBackend.DomainPets.Models;
 using GrupoWebBackend.DomainPets.Repositories;
 using GrupoWebBackend.DomainPets.Services;
 using GrupoWebBackend.DomainPets.Services.Communications;
+using GrupoWebBackend.DomainPublications.Repositories;
 
 namespace GrupoWebBackend.Services
 {
@@ -12,11 +13,13 @@ namespace GrupoWebBackend.Services
     {
         private readonly IPetRepository _petRepository;
         private readonly IUnitOfWork _unitOfWork;
-        
-        public PetService(IPetRepository petRepository, IUnitOfWork unitOfWork)
+        private readonly IPublicationRepository _publicationRepository;
+
+        public PetService(IPetRepository petRepository, IPublicationRepository publicationRepository, IUnitOfWork unitOfWork)
         {
             _petRepository = petRepository;
             _unitOfWork = unitOfWork;
+            _publicationRepository = publicationRepository;
         }
 
         public async Task<IEnumerable<Pet>> ListAsync()
@@ -33,6 +36,10 @@ namespace GrupoWebBackend.Services
         
         public async Task<SavePetResponse> AddAsync(Pet pet)
         {
+            var existingUser = _publicationRepository.FindByUserId(pet.UserId);
+            if (existingUser == null)
+                return new SavePetResponse("invalid user");
+            
             try
             {
                 await _petRepository.AddAsync(pet);
