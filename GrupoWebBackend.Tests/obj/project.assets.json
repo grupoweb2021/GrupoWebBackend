@@ -9208,23 +9208,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ricar\\.nuget\\packages\\": {},
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ricar\\Desktop\\Backend Web\\GrupoWebBackend\\GrupoWebBackend.Tests\\GrupoWebBackend.Tests.csproj",
+      "projectUniqueName": "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v6\\GrupoWebBackend\\GrupoWebBackend.Tests\\GrupoWebBackend.Tests.csproj",
       "projectName": "GrupoWebBackend.Tests",
-      "projectPath": "C:\\Users\\ricar\\Desktop\\Backend Web\\GrupoWebBackend\\GrupoWebBackend.Tests\\GrupoWebBackend.Tests.csproj",
-      "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ricar\\Desktop\\Backend Web\\GrupoWebBackend\\GrupoWebBackend.Tests\\obj\\",
+      "projectPath": "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v6\\GrupoWebBackend\\GrupoWebBackend.Tests\\GrupoWebBackend.Tests.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v6\\GrupoWebBackend\\GrupoWebBackend.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9239,8 +9239,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\ricar\\Desktop\\Backend Web\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj": {
-              "projectPath": "C:\\Users\\ricar\\Desktop\\Backend Web\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj"
+            "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v6\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj": {
+              "projectPath": "D:\\Documentos\\2021-2\\Backend-Aplicaciones web-Versiones\\v6\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj"
             }
           }
         }

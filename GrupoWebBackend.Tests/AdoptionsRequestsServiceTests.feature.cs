@@ -114,14 +114,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.Given("the endpoint https://localhost:5001/api/v1/AdoptionsRequests is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Message",
                             "Status"});
-                table1.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "hola",
                             "pending"});
 #line 9
- testRunner.When("A adoptionsrequests is sent", ((string)(null)), table1, "When ");
+ testRunner.When("A adoptionsrequests is sent", ((string)(null)), table6, "When ");
 #line hidden
 #line 12
    testRunner.Then("A response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
