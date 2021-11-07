@@ -5,10 +5,16 @@ namespace GrupoWebBackend.Resources
     public class SavePublicationResource
     {
         [Required]
-        public string comment { get; set; }
+        public int PetId { get; set; }
         [Required]
-        public string dateTime {get; set; }
+        public int UserId {get; set; }
+        [Required] 
+        public string DateTime { get; set; }
         [Required]
-        public int Id {get; set; }
+        public string Comment { get; set; }
+
+        
+
+       
     }
 }

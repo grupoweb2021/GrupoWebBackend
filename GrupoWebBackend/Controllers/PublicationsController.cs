@@ -23,7 +23,7 @@ namespace GrupoWebBackend.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<PublicationResource>> GetAllAdvertisements()
+        public async Task<IEnumerable<PublicationResource>> GetAllPublications()
         {
             var _publications = await _publicationService.ListPublicationAsync();
             var resources = _mapper.Map<IEnumerable<Publication>, IEnumerable<PublicationResource>>(_publications);
@@ -35,7 +35,7 @@ namespace GrupoWebBackend.Controllers
             if (!ModelState.IsValid)
             
                 return BadRequest(ModelState.GetErrorMessages());
-
+          
             var publication = _mapper.Map<SavePublicationResource, Publication>(resource);
             var result = await _publicationService.SaveAsync(publication);
 

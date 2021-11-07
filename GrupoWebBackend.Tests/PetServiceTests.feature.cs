@@ -40,8 +40,8 @@ namespace GrupoWebBackend.Tests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "PetServiceTest", "    As a Developer\r\n    I wan to add new Pet through API\r\n    So that it is avail" +
-                    "able when wanting to make publications.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "PetServiceTest", "As a Developer\r\nI wan to add new Pet through API\r\nSo that it is available when wa" +
+                    "nting to make publications.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,6 +76,42 @@ namespace GrupoWebBackend.Tests
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+    #line hidden
+#line 7
+        testRunner.Given("The Endpoint https://localhost:5001/api/v1/Pets is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Id",
+                        "Type",
+                        "UserNick",
+                        "Pass",
+                        "Ruc",
+                        "Dni",
+                        "Phone",
+                        "Email",
+                        "Name",
+                        "LastName",
+                        "DistrictId"});
+            table2.AddRow(new string[] {
+                        "1",
+                        "VET",
+                        "Frank",
+                        "Don\'t know",
+                        "74544",
+                        "65454",
+                        "951083038",
+                        "ricaordo@gmail",
+                        "Ricardo",
+                        "Yalico",
+                        "1"});
+#line 8
+        testRunner.And("A User is already stored", ((string)(null)), table2, "And ");
+#line hidden
+        }
+        
         void System.IDisposable.Dispose()
         {
             this.TestTearDown();
@@ -91,7 +127,7 @@ namespace GrupoWebBackend.Tests
                     "pet-adding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Pet", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 7
+#line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -111,23 +147,8 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
-    testRunner.Given("The Endpoint https://localhost:5001/api/v1/Pets is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Id",
-                            "Type",
-                            "UserNick",
-                            "Pass",
-                            "Ruc",
-                            "Dni",
-                            "Phone",
-                            "Email",
-                            "Name",
-                            "LastName",
-                            "LocationId"});
-#line 9
-    testRunner.And("A User is already stored", ((string)(null)), table2, "And ");
+#line 6
+    this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Type",
@@ -145,11 +166,30 @@ this.ScenarioInitialize(scenarioInfo);
                             "2",
                             "false",
                             "1"});
-#line 13
+#line 14
     testRunner.When("A Post Request is sent", ((string)(null)), table3, "When ");
 #line hidden
-#line 16
+#line 17
     testRunner.Then("A Response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Type",
+                            "Name",
+                            "Attention",
+                            "Race",
+                            "Age",
+                            "IsAdopted",
+                            "UserId"});
+                table4.AddRow(new string[] {
+                            "Can",
+                            "Lolo",
+                            "Yes",
+                            "Pitbull",
+                            "2",
+                            "false",
+                            "1"});
+#line 18
+    testRunner.And("A Pet Resource is incluided in Response Body", ((string)(null)), table4, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
