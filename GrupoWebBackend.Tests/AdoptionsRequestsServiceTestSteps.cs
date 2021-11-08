@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
-using GrupoWebBackend.Resources;
+using GrupoWebBackend.DomainAdoptionsRequests.Resources;
 using Microsoft.AspNetCore.Mvc.Testing;
 using NUnit.Framework;
 using SpecFlow.Internal.Json;
