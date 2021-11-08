@@ -1,9 +1,12 @@
 ﻿using AutoMapper;
-using GrupoWebBackend.DomainAdoptionsRequests.Models;
-using GrupoWebBackend.DomainAdvertisements.Models;
-using GrupoWebBackend.DomainPets.Models;
-using GrupoWebBackend.DomainPublications.Models;
-using GrupoWebBackend.Resources;
+using GrupoWebBackend.DomainAdoptionsRequests.Domain.Models;
+using GrupoWebBackend.DomainAdvertisements.Domain.Models;
+using GrupoWebBackend.DomainPets.Domain.Models;
+using GrupoWebBackend.DomainPublications.Domain.Models;
+using GrupoWebBackend.DomainAdoptionsRequests.Resources;
+using GrupoWebBackend.DomainAdvertisements.Resources;
+using GrupoWebBackend.DomainPets.Resources;
+using GrupoWebBackend.DomainPublications.Resources;
 
 namespace GrupoWebBackend.Mapping
 {
