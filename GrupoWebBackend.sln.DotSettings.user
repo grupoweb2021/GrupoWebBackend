@@ -2,12 +2,9 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=07a6696a_002Db089_002D4bc1_002D845f_002Dd6377c1b95cb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;GrupoWebBackend.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="C:\Users\ricar\Desktop\Backend Web\GrupoWebBackend\GrupoWebBackend.Tests" Presentation="&amp;lt;GrupoWebBackend.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=aff8138c_002D9f8e_002D4e0f_002Db6b2_002D27b683269f50/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;GrupoWebBackend.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Or&gt;&#xD;
-    &lt;ProjectFile&gt;9218BBBB-8680-41FA-BC0C-305F6DDD4DAB/f:PetServiceTests.feature.cs&lt;/ProjectFile&gt;&#xD;
-    &lt;ProjectFile&gt;9218BBBB-8680-41FA-BC0C-305F6DDD4DAB/f:AdvertisementServiceTests.feature.cs&lt;/ProjectFile&gt;&#xD;
-  &lt;/Or&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=aff8138c_002D9f8e_002D4e0f_002Db6b2_002D27b683269f50/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;GrupoWebBackend.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\Dyland\Desktop\GrupoWebBackend\GrupoWebBackend.Tests" Presentation="&amp;lt;GrupoWebBackend.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c039fc3f_002Dc6c1_002D48e2_002Da7fe_002D41b5e73e3f52/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PublicationServiceTestsFeature" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="D:\Documentos\2021-2\Backend-Aplicaciones web-Versiones\v6\GrupoWebBackend\GrupoWebBackend.Tests" Presentation="&amp;lt;GrupoWebBackend.Tests&amp;gt;" /&gt;&#xD;
+  &lt;Project Location="C:\Users\ricar\Desktop\Backend Web\GrupoWebBackend\GrupoWebBackend.Tests" Presentation="&amp;lt;GrupoWebBackend.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
