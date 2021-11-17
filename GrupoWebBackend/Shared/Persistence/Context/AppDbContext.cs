@@ -1,28 +1,59 @@
-﻿using GrupoWebBackend.DomainAdvertisements.Domain.Models;
+﻿using Microsoft.Extensions.Configuration;
+using GrupoWebBackend.DomainAdvertisements.Domain.Models;
 using GrupoWebBackend.DomainPets.Domain.Models;
 using GrupoWebBackend.DomainPublications.Domain.Models;
 using GrupoWebBackend.DomainAdoptionsRequests.Domain.Models;
-using GrupoWebBackend.DomainUsers.Domain.Models;
+using GrupoWebBackend.DomainDistrict.Domain.Models;
+using GrupoWebBackend.Security.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace GrupoWebBackend.Shared.Persistence.Context
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions options) : base(options)
+        protected readonly IConfiguration _configuration;
+        public AppDbContext(DbContextOptions options, IConfiguration configuration) : base(options)
         {
+            _configuration = configuration;
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder builder)
+        {
+            builder.UseMySQL(_configuration.GetConnectionString("DefaultConnection"));
+        }
+        
         public DbSet<Pet> Pets { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Advertisement> Advertisements { get; set; }
         public DbSet<Publication> Publications { get; set; }
         public DbSet<AdoptionsRequests> AdoptionsRequests { get; set; }
-
+        public DbSet<District> Districts { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            // Districts
+            builder.Entity<District>().ToTable("Districts");
+            builder.Entity<District>().HasKey(p => p.Id);
+            builder.Entity<District>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
 
+            
+            
+            
+            // Users
+            builder.Entity<User>().ToTable("Users");
+            builder.Entity<User>().HasKey(p => p.Id);
+            builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<User>().Property(p => p.UserNick).IsRequired();
+            builder.Entity<User>().Property(p => p.Type).IsRequired();
+            builder.Entity<User>().Property(p => p.Email).IsRequired();
+            builder.Entity<User>().Property(p => p.Phone).IsRequired();
+            builder.Entity<User>().Property(p => p.DistrictId).IsRequired();
+            builder.Entity<User>().Property(p => p.Dni).IsRequired();
+            builder.Entity<User>().Property(p => p.Ruc).IsRequired();
+            builder.Entity<User>().Property(p => p.Name).IsRequired();
+            builder.Entity<User>().Property(p => p.LastName).IsRequired();
+            
             // Pet Constraints
             builder.Entity<Pet>().ToTable("Pets");
             builder.Entity<Pet>().HasKey(p => p.Id);
@@ -105,7 +136,8 @@ namespace GrupoWebBackend.Shared.Persistence.Context
                 .HasForeignKey(p => p.UserId);
 
 
-            builder.Entity<District>().HasData(
+            
+            /*builder.Entity<District>().HasData(
                 new District
                 {
                     Id = 1,
@@ -116,9 +148,9 @@ namespace GrupoWebBackend.Shared.Persistence.Context
                     Id = 2,
                     DistrictName = "San Miguel"
                 }
-            );
+            );*/
             
-            builder.Entity<User>().HasData(
+            /*builder.Entity<User>().HasData(
                 new User
                 {
                     Id = 1,
@@ -134,9 +166,9 @@ namespace GrupoWebBackend.Shared.Persistence.Context
                     DistrictId = 1
                     //PetId = 100
                 }
-            );
+            );*/
             // Pet Sample Data
-            builder.Entity<Pet>().HasData
+            /*builder.Entity<Pet>().HasData
             (
                 new Pet
                 {
@@ -161,11 +193,35 @@ namespace GrupoWebBackend.Shared.Persistence.Context
                     IsAdopted = true,
                     UserId = 1,
                     PublicationId = 1
+                },
+                new Pet
+                {
+                    Id = 102,
+                    Type = "Cat",
+                    Name = "Lulu",
+                    Attention = "No Required",
+                    Race = "Catitus",
+                    Age = 2,
+                    IsAdopted = true,
+                    UserId = 1,
+                    PublicationId = 1
+                },
+                new Pet
+                {
+                    Id = 103,
+                    Type = "Cat",
+                    Name = "Lulu",
+                    Attention = "No Required",
+                    Race = "Catitus",
+                    Age = 3,
+                    IsAdopted = true,
+                    UserId = 1,
+                    PublicationId = 1
                 }
-            );
+            );*/
 
             //Advertisement Sample Data
-            builder.Entity<Advertisement>().HasData
+            /*builder.Entity<Advertisement>().HasData
             (
                 new Advertisement
                 {
@@ -178,10 +234,11 @@ namespace GrupoWebBackend.Shared.Persistence.Context
                     UrlToImage = "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
                     Promoted = true
                 }
-            );
+            );*/
             //User SampleData
 
             //Publications SampleData
+            /*
             builder.Entity<Publication>().HasData
             (
                 new Publication()
@@ -209,19 +266,21 @@ namespace GrupoWebBackend.Shared.Persistence.Context
                     Comment = "this is a comment"
                 }
             );
+            */
 
             //AdoptionsRequests SampleData
 
-            builder.Entity<AdoptionsRequests>().HasData(
-                new AdoptionsRequests()
-                {
-                    Id = 1,
-                    Message = "hola",
-                    Status = "pending",
-                    //UserId = -1,
-                    //PublicationId = -1
-                }
-            );
+            // builder.Entity<AdoptionsRequests>().HasData(
+            //     new AdoptionsRequests()
+            //     {
+            //         Id = 1,
+            //         Message = "hola",
+            //         Status = "pending",
+            //         //UserId = -1,
+            //         //PublicationId = -1
+            //     }
+            // );
+            // builder.UseSnakeCaseNamingConvention();
         }
     }
 }

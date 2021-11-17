@@ -11,7 +11,7 @@ using NUnit.Framework;
 using SpecFlow.Internal.Json;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
-using GrupoWebBackend.DomainUsers.Resources;
+using GrupoWebBackend.Security.Resources;
 using Newtonsoft.Json;
 
 namespace GrupoWebBackend.Tests

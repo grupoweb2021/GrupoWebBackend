@@ -3,8 +3,6 @@ using System.Threading.Tasks;
 using AutoMapper;
 using GrupoWebBackend.DomainAdvertisements.Domain.Models;
 using GrupoWebBackend.DomainAdvertisements.Domain.Services;
-using GrupoWebBackend.DomainPets.Domain.Models;
-using GrupoWebBackend.DomainPets.Domain.Services;
 using GrupoWebBackend.Extensions;
 using GrupoWebBackend.DomainAdvertisements.Resources;
 using Microsoft.AspNetCore.Mvc;
