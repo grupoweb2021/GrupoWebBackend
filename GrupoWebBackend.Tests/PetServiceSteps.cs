@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using GrupoWebBackend.DomainPets.Resources;
-using GrupoWebBackend.DomainUsers.Resources;
+using GrupoWebBackend.Security.Resources;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 using NUnit.Framework;

@@ -11,6 +11,9 @@ namespace GrupoWebBackend.DomainPets.Domain.Services
         Task<Pet> FindAsync(int id);
         Task<SavePetResponse> AddAsync(Pet publication);
         Task<PetResponse> UpdateAsync(Pet pet, int id);
+        IEnumerable<Pet> GetPet(string race, int age);
+        Task<PetResponse> DeleteAsync(int id);
+
     }
     
 }

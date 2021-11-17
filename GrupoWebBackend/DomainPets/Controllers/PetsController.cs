@@ -30,12 +30,12 @@ namespace GrupoWebBackend.DomainPets.Controllers
             return pets;
         }
 
-        // [HttpGet("{id:int}")]
-        // public async Task<Pet> FindAsync(int id)
-        // {
-        //     var pet = await _petService.FindAsync(id);
-        //     return pet;
-        // }
+        [HttpGet("{id:int}")]
+        public async Task<Pet> FindAsync(int id)
+        {
+            var pet = await _petService.FindAsync(id);
+            return pet;
+        }
 
 
         [HttpPost]
@@ -71,6 +71,22 @@ namespace GrupoWebBackend.DomainPets.Controllers
             return Ok(petResource);
             
         }
-        
+
+        [HttpGet("race={race}&&age={age:int}")]
+        public IEnumerable<Pet> GetPets(string race, int age)
+        {
+            return _petService.GetPet(race, age);
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var result = await _petService.DeleteAsync(id);
+            if (!result.Success)
+                return BadRequest(result.Message);
+            var petResourceResource = _mapper.Map<Pet, PetResource>(result.Resource);
+            return Ok(petResourceResource);
+        }
+
     }
 }

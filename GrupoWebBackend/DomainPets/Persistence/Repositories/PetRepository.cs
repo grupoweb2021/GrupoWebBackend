@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using GrupoWebBackend.DomainPets.Domain.Models;
 using GrupoWebBackend.DomainPets.Domain.Repositories;
@@ -31,6 +32,16 @@ namespace GrupoWebBackend.DomainPets.Persistence.Repositories
         public void UpdateAsync(Pet pet)
         {
             _context.Pets.Update(pet);
+        }
+
+        public void Delete(Pet pet)
+        {
+            _context.Pets.Remove(pet);
+        }
+
+        public IEnumerable<Pet> GetPet(string race, int age)
+        {
+            return _context.Pets.Where(p => p.Race.Equals(race)).Where(p=>p.Age.Equals(age)).ToList();
         }
     }
 }

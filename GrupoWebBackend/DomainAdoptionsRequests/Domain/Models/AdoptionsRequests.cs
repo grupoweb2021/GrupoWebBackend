@@ -1,6 +1,5 @@
 ﻿using GrupoWebBackend.DomainPublications.Domain.Models;
-using GrupoWebBackend.DomainPets.Domain.Models;
-using GrupoWebBackend.DomainUsers.Domain.Models;
+using GrupoWebBackend.Security.Domain.Entities;
 
 namespace GrupoWebBackend.DomainAdoptionsRequests.Domain.Models
 {

@@ -6,6 +6,7 @@ using GrupoWebBackend.DomainPets.Domain.Repositories;
 using GrupoWebBackend.DomainPets.Domain.Services;
 using GrupoWebBackend.DomainPets.Domain.Services.Communications;
 using GrupoWebBackend.DomainPublications.Domain.Repositories;
+using GrupoWebBackend.Shared.Domain.Repositories;
 
 namespace GrupoWebBackend.DomainPets.Services
 {
@@ -73,6 +74,28 @@ namespace GrupoWebBackend.DomainPets.Services
             catch (Exception e)
             {
                 return new PetResponse($"An error occurred while saving Category: {e.Message}");
+            }
+        }
+
+        public IEnumerable<Pet> GetPet(string race, int age)
+        {
+            return _petRepository.GetPet(race, age);
+        }
+
+        public async Task<PetResponse> DeleteAsync(int id)
+        {
+            var existingPet = await _petRepository.FindAsync(id);
+            if (existingPet == null)
+                return new PetResponse("Pet not found.");
+            try
+            {
+                _petRepository.Delete(existingPet);
+                await _unitOfWork.CompleteAsync();
+                return new PetResponse(existingPet);
+            }
+            catch (Exception e)
+            {
+                return new PetResponse($"An error occurred while deleting the pet: {e.Message}");
             }
         }
     }

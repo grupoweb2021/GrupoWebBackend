@@ -9,6 +9,7 @@ using GrupoWebBackend.Shared.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using GrupoWebBackend.DomainAdoptionsRequests.Domain.Services.Communications;
+using GrupoWebBackend.Shared.Domain.Repositories;
 
 namespace GrupoWebBackend.DomainAdoptionsRequests.Services
 {
