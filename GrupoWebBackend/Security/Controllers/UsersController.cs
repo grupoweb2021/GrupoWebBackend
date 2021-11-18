@@ -7,6 +7,7 @@ using GrupoWebBackend.Security.Domain.Entities;
 using GrupoWebBackend.Security.Domain.Services;
 using GrupoWebBackend.Security.Domain.Services.Communication;
 using GrupoWebBackend.Security.Resources;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace GrupoWebBackend.Security.Controllers
 {
@@ -45,6 +46,7 @@ namespace GrupoWebBackend.Security.Controllers
         }
         
         [HttpGet]
+        [SwaggerOperation(Summary="Get All Advertisements",Tags= new [] {"Advertisements"})]
         public async Task<IActionResult> GetAll()
         {
             var users = await _userService.ListAsync();

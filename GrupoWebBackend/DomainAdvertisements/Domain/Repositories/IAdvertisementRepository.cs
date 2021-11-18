@@ -13,5 +13,6 @@ namespace GrupoWebBackend.DomainAdvertisements.Domain.Repositories
         void Remove(Advertisement advertisement);
         Task<Advertisement> FindByTitleAsync(string title);
         Task<IEnumerable<Advertisement>> FindByUserId(int userId);
+        IEnumerable<Advertisement> GetAdvertisementWithDiscount(bool promoted);
     }
 }

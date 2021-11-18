@@ -104,5 +104,10 @@ namespace GrupoWebBackend.DomainAdvertisements.Services
                 return new AdvertisementResponse($"An error occurred while deleting the advertisement: {e.Message}");
             }
         }
+
+        public IEnumerable<Advertisement> GetAdvertisementsWithDiscount(bool promoted)
+        {
+            return _advertisementRepository.GetAdvertisementWithDiscount(promoted);
+        }
     }
 }
