@@ -27,7 +27,6 @@ namespace GrupoWebBackend.DomainAdvertisements.Controllers
             var advertisements = await _advertisementService.ListAdvertisementAsync();
             var resources = _mapper.Map<IEnumerable<Advertisement>, IEnumerable<AdvertisementResource>>(advertisements);
             return resources;
-
         }
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SaveAdvertisementResource resource)

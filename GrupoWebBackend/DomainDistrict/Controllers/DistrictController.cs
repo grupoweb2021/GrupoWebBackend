@@ -5,10 +5,12 @@ using GrupoWebBackend.DomainDistrict.Domain.Models;
 using GrupoWebBackend.DomainDistrict.Domain.Services;
 using GrupoWebBackend.Extensions;
 using GrupoWebBackend.DomainDistrict.Resources;
+using GrupoWebBackend.Security.Authorization.Attributes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GrupoWebBackend.DomainDistrict.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("/api/v1/[controller]")]
     public class DistrictController : ControllerBase

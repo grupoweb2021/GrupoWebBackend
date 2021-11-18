@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
 using AutoMapper;
+using Gherkin;
 using GrupoWebBackend.DomainPets.Domain.Models;
 using GrupoWebBackend.DomainPets.Domain.Services;
 using GrupoWebBackend.DomainPublications.Domain.Models;
 using GrupoWebBackend.Extensions;
 using GrupoWebBackend.DomainPets.Resources;
+using GrupoWebBackend.Security.Authorization.Attributes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GrupoWebBackend.DomainPets.Controllers
@@ -37,7 +40,7 @@ namespace GrupoWebBackend.DomainPets.Controllers
             return pet;
         }
 
-
+        
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SavePetResource resource)
         {

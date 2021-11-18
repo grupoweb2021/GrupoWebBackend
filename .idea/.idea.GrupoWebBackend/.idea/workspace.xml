@@ -9,170 +9,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0946c3-99d2-4862-9b43-d9f983b1f871" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Controllers/DistrictController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Domain/Repositories/IDistrictRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Domain/Services/Communications/BaseResponseA.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Domain/Services/Communications/DistrictResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Domain/Services/Communications/SaveDistrictResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Domain/Services/IDistrictService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Persistence/Repositories/DistrictRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Resources/DistrictResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Resources/SaveDistrictResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Services/DistrictService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Extensions/StringExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Authorization/Attributes/AllowAnonymousAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Authorization/Attributes/AuthorizeAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Authorization/Handlers/Implementations/JwtHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Authorization/Handlers/Interfaces/IJwtHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Authorization/Middleware/ErrorHandlerMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Authorization/Middleware/JwtMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Authorization/Settings/AppSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Controllers/UsersController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Domain/Entities/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Domain/Repositories/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Domain/Services/Communication/AuthenticateRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Domain/Services/Communication/AuthenticateResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Domain/Services/Communication/RegisterRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Domain/Services/Communication/UpdateRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Domain/Services/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Persistence/Repositories/UserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Resources/UserResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Services/UserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Shared/Domain/Repositories/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/Shared/Exceptions/AppException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/BCrypt.Net-Next.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/BouncyCastle.Crypto.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.StaticWebAssets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/K4os.Compression.LZ4.Streams.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/K4os.Compression.LZ4.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/K4os.Hash.xxHash.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.Design.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/MySql.Data.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/MySql.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Ubiety.Dns.Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/ZstdNet.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_05_11_2021_22_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_05_11_2021_22_52__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.Tests3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/GrupoWebBackend2.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/project.nuget1.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_11_08__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_1_02_[Changes]/GrupoWebBackend.Tests.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_1_02_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021_1_02__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/AddRequestServiceTestsSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/AddRequestServiceTestsSteps.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/AdoptiosRequestsServiceStep.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/AdoptiosRequestsServiceStep.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/PetServiceSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/PetServiceSteps.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/bin/Debug/net5.0/CoverletSourceRootsMapping" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/bin/Debug/net5.0/CoverletSourceRootsMapping" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/bin/Debug/net5.0/GrupoWebBackend.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/bin/Debug/net5.0/GrupoWebBackend.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/GrupoWebBackend.Tests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/GrupoWebBackend.Tests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/GrupoWebBackend.Tests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/GrupoWebBackend.Tests.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/GrupoWebBackend.Tests.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/GrupoWebBackend.Tests.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Domain/Models/AdoptionsRequests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Domain/Models/AdoptionsRequests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Services/AdoptionsRequestsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Services/AdoptionsRequestsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainAdvertisements/Controllers/AdvertisementsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainAdvertisements/Controllers/AdvertisementsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainAdvertisements/Domain/Models/Advertisement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainAdvertisements/Domain/Models/Advertisement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainAdvertisements/Services/AdvertisementService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainAdvertisements/Services/AdvertisementService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Controllers/DistrictController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Controllers/DistrictController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Controllers/PetsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Controllers/PetsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Models/District.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainDistrict/Domain/Models/District.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Models/Location.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Models/Pet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Models/Pet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Repositories/IPetRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Repositories/IPetRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Repositories/IUnitOfWork.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Services/IPetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Services/IPetService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Persistence/Repositories/PetRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Persistence/Repositories/PetRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/PetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/PetService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Domain/Models/Publication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Domain/Models/Publication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Services/PublicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Services/PublicationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Controllers/UserAdvertisementController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Controllers/UserPublicationController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Controllers/UsersController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Domain/Models/User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Domain/Repositories/IUserRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Domain/Services/Communications/UserResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Domain/Services/IUserService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Persistence/Repositories/UserRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Resources/SaveUserResource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Resources/UserResource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainUsers/Services/UserService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/GrupoWebBackend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/GrupoWebBackend.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Mapping/ModelToResourceProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Mapping/ModelToResourceProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Mapping/ResourceToModelProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Mapping/ResourceToModelProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Shared/Persistence/Context/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Shared/Persistence/Context/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Shared/Persistence/Repositories/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Shared/Persistence/Repositories/UnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Google.Protobuf.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Google.Protobuf.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.exe" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.runtimeconfig.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/ref/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/ref/GrupoWebBackend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/ref/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/ref/GrupoWebBackend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/GrupoWebBackend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/GrupoWebBackend.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/GrupoWebBackend.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/GrupoWebBackend.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global.json" beforeDir="false" afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,6 +134,8 @@
       <workItem from="1637075111532" duration="3794000" />
       <workItem from="1637080456367" duration="17776000" />
       <workItem from="1637164768216" duration="7409000" />
+      <workItem from="1637177176006" duration="112000" />
+      <workItem from="1637177407997" duration="3531000" />
     </task>
     <servers />
   </component>
