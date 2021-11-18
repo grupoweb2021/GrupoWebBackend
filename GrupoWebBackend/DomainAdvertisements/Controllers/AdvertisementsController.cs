@@ -22,12 +22,19 @@ namespace GrupoWebBackend.DomainAdvertisements.Controllers
         }
         
         [HttpGet]
+        
         public async Task<IEnumerable<AdvertisementResource>> GetAllAdvertisements()
         {
             var advertisements = await _advertisementService.ListAdvertisementAsync();
             var resources = _mapper.Map<IEnumerable<Advertisement>, IEnumerable<AdvertisementResource>>(advertisements);
             return resources;
 
+        }
+
+        [HttpGet ("promoted={promoted}")]
+        public IEnumerable<Advertisement> GetDiscountedAdds(bool promoted)
+        {
+            return _advertisementService.GetAdvertisementsWithDiscount(promoted);
         }
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SaveAdvertisementResource resource)

@@ -12,5 +12,6 @@ namespace GrupoWebBackend.DomainAdvertisements.Domain.Services
         Task<AdvertisementResponse> SaveAsync(Advertisement advertisement);
         Task<AdvertisementResponse> UpdateAsync(int id, Advertisement advertisement);
         Task<AdvertisementResponse> DeleteAsync(int id);
+        IEnumerable<Advertisement> GetAdvertisementsWithDiscount(bool promoted);
     }
 }

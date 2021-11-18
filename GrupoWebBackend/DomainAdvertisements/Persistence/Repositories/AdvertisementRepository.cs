@@ -55,5 +55,10 @@ namespace GrupoWebBackend.DomainAdvertisements.Persistence.Repositories
                 .ToListAsync();
 
         }
+
+        public IEnumerable<Advertisement> GetAdvertisementWithDiscount(bool promoted)
+        {
+            return _context.Advertisements.Where(p => p.Promoted.Equals(promoted)).Where(p=>p.Promoted==true);
+        }
     }
 }
