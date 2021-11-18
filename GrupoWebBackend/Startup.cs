@@ -66,6 +66,7 @@ namespace GrupoWebBackend
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "GrupoWebBackend", Version = "v1"});
+                c.EnableAnnotations();
             });
             
             // DbContext

@@ -7,6 +7,7 @@ using GrupoWebBackend.DomainPublications.Domain.Services;
 using GrupoWebBackend.Extensions;
 using GrupoWebBackend.DomainPublications.Resources;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace GrupoWebBackend.DomainPublications.Controllers
 {
@@ -23,6 +24,7 @@ namespace GrupoWebBackend.DomainPublications.Controllers
         }
 
         [HttpGet]
+        [SwaggerOperation(Summary="Get All publications",Tags= new [] {"Publications"})]
         public async Task<IEnumerable<PublicationResource>> GetAllPublications()
         {
             var _publications = await _publicationService.ListPublicationAsync();
@@ -30,6 +32,7 @@ namespace GrupoWebBackend.DomainPublications.Controllers
             return resources;
         }
         [HttpPost]
+        [SwaggerOperation(Summary="Post a publication",Tags= new [] {"Publications"})]
         public async Task<IActionResult> PostAsync([FromBody] SavePublicationResource resource)
         {
             if (!ModelState.IsValid)
@@ -47,6 +50,7 @@ namespace GrupoWebBackend.DomainPublications.Controllers
             return Ok(publicationResource);
         }
         [HttpPut (template:"{id}")]
+        [SwaggerOperation(Summary="Update a publication",Tags= new [] {"Publications"})]
         public async Task<IActionResult> PutAsync (int id, [FromBody] SavePublicationResource resource)
         {
             if (!ModelState.IsValid)
@@ -64,6 +68,7 @@ namespace GrupoWebBackend.DomainPublications.Controllers
             
         }
         [HttpDelete(template:"{id}")]
+        [SwaggerOperation(Summary="Delete a specific publications",Tags= new [] {"Publications"})]
         public async Task<IActionResult>DeleteAsync(int id)
         {
             var result = await _publicationService.DeleteAsync(id);
