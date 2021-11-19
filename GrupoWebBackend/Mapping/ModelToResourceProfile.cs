@@ -12,6 +12,7 @@ using GrupoWebBackend.DomainPets.Resources;
 using GrupoWebBackend.DomainPublications.Resources;
 using GrupoWebBackend.Security.Domain.Entities;
 using GrupoWebBackend.Security.Domain.Services.Communication;
+using GrupoWebBackend.Security.Resources;
 
 namespace GrupoWebBackend.Mapping
 {
@@ -27,7 +28,7 @@ namespace GrupoWebBackend.Mapping
             CreateMap<User, RegisterRequest>();
             CreateMap<User, AuthenticateResponse>();
             CreateMap<User, AuthenticateRequest>();
-            
+            CreateMap<User, UserResource>();
             
             
             
