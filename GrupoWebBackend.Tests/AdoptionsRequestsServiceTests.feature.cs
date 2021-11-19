@@ -160,7 +160,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("A adoption request is sent", ((string)(null)), table7, "When ");
 #line hidden
 #line 15
- testRunner.Then("A Response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("A Response with Status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

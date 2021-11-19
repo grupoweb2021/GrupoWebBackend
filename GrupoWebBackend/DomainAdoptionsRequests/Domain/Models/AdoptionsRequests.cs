@@ -1,4 +1,6 @@
-﻿using GrupoWebBackend.DomainPublications.Domain.Models;
+﻿
+using System.Diagnostics.CodeAnalysis;
+using GrupoWebBackend.DomainPublications.Domain.Models;
 using GrupoWebBackend.Security.Domain.Entities;
 
 namespace GrupoWebBackend.DomainAdoptionsRequests.Domain.Models
@@ -6,15 +8,14 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Domain.Models
     public class AdoptionsRequests
     {
         public int Id { get; set; }
-        
         public string Message { get; set; }
-
         public string Status { get; set; }
-        
-        public int UserId;
+        public int UserIdFrom { get; set; }
+        public int UserIdAt { get; set; }
         public User User { get; set; }
-        
-        public int PublicationId;
-        public Publication Publication;
+        [AllowNull]
+        public int? PublicationId { get; set; }
+
+        public Publication Publication { get; set; }
     }
 }

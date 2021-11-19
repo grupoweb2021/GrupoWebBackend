@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ricardo\\Desktop\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj": {}
+    "C:\\Users\\Dyland\\Downloads\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ricardo\\Desktop\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj": {
+    "C:\\Users\\Dyland\\Downloads\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
+        "projectUniqueName": "C:\\Users\\Dyland\\Downloads\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
         "projectName": "GrupoWebBackend",
-        "projectPath": "C:\\Users\\Ricardo\\Desktop\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
-        "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ricardo\\Desktop\\GrupoWebBackend\\GrupoWebBackend\\obj\\",
+        "projectPath": "C:\\Users\\Dyland\\Downloads\\GrupoWebBackend\\GrupoWebBackend\\GrupoWebBackend.csproj",
+        "packagesPath": "C:\\Users\\Dyland\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dyland\\Downloads\\GrupoWebBackend\\GrupoWebBackend\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Ricardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dyland\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -121,7 +125,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

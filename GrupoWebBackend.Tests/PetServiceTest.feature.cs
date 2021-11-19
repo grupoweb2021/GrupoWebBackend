@@ -96,17 +96,17 @@ namespace GrupoWebBackend.Tests
                         "LastName",
                         "DistrictId"});
             table9.AddRow(new string[] {
-                        "1",
+                        "1000",
                         "VET",
-                        "Frank",
-                        "Password",
+                        "string",
+                        "string",
                         "A12345rf",
                         "70258688",
                         "946401234",
                         "frank@outlook.com",
                         "Francisco",
                         "Voularte",
-                        "1"});
+                        "0"});
 #line 7
   testRunner.And("A user is already stored", ((string)(null)), table9, "And ");
 #line hidden
@@ -166,7 +166,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Pitbull",
                             "2",
                             "false",
-                            "1",
+                            "3",
                             "1"});
 #line 12
  testRunner.When("A Post Request is sent", ((string)(null)), table10, "When ");
@@ -225,7 +225,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "",
                             "2",
                             "false",
-                            "1001",
+                            "3",
                             "1"});
 #line 18
  testRunner.When("A Post Request is sent", ((string)(null)), table11, "When ");

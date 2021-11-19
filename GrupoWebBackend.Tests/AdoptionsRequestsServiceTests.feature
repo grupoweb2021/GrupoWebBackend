@@ -12,7 +12,7 @@ Scenario: A AdoptionsRequests is sent
 	When A adoption request is sent
 	| Message | Status  |
 	| hello   | pending |
-	Then A Response with Status 200 is received
+	Then A Response with Status 400 is received
 Scenario: Add Adoption Request with empty data
 	When A post adoption request is sent
 	  | Message | Status  |
