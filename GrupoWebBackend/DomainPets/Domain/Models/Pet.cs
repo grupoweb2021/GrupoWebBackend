@@ -1,4 +1,6 @@
-﻿using GrupoWebBackend.DomainPublications.Domain.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
+using GrupoWebBackend.DomainPublications.Domain.Models;
 using GrupoWebBackend.Security.Domain.Entities;
 
 namespace GrupoWebBackend.DomainPets.Domain.Models
@@ -14,7 +16,8 @@ namespace GrupoWebBackend.DomainPets.Domain.Models
         public bool IsAdopted { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-        public int PublicationId { get; set; }
+        [AllowNull]
+        public int? PublicationId { get; set; }
         public Publication Publication { get; set; }
     }
 }
