@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace GrupoWebBackend.DomainPets.Resources
 {
@@ -18,7 +19,7 @@ namespace GrupoWebBackend.DomainPets.Resources
         public bool IsAdopted {get; set; }
         [Required]
         public int UserId { get; set; }
-        [Required]
+        [AllowNull]
         public int PublicationId { get; set; }
     }
 }

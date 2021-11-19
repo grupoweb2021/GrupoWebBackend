@@ -64,6 +64,7 @@ namespace GrupoWebBackend.Shared.Persistence.Context
             builder.Entity<Pet>().Property(p => p.Age).IsRequired();
             builder.Entity<Pet>().Property(p => p.Race).IsRequired();
             builder.Entity<Pet>().Property(p => p.IsAdopted).IsRequired();
+            builder.Entity<Pet>().Property(p => p.PublicationId).IsRequired(false);
 
 
             //Advertisement Constraints
