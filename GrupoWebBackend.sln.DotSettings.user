@@ -2,6 +2,7 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ComponentModel.Annotations.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\5.0.0\ref\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Dyland\.nuget\packages\automapper\10.1.1\lib\netstandard2.0\AutoMapper.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=07a6696a_002Db089_002D4bc1_002D845f_002Dd6377c1b95cb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;GrupoWebBackend.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="C:\Users\ricar\Desktop\Backend Web\GrupoWebBackend\GrupoWebBackend.Tests" Presentation="&amp;lt;GrupoWebBackend.Tests&amp;gt;" /&gt;&#xD;

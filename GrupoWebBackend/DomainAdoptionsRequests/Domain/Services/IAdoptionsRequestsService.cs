@@ -11,7 +11,7 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Domain.Services
 
       //  Task<IEnumerable<AdoptionsRequests>> ListByUserId(int userId);
 
-        Task<AdoptionsRequestsResponse> SaveAsync(AdoptionsRequests adoptionsRequest);
+        Task<SaveAdoptionsRequestsResponse> AddAsync(AdoptionsRequests adoptionsRequest);
 
         Task<AdoptionsRequestsResponse> DeleteAsync(int id);
         

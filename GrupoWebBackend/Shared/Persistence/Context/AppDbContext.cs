@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System.Security.Policy;
+using Microsoft.Extensions.Configuration;
 using GrupoWebBackend.DomainAdvertisements.Domain.Models;
 using GrupoWebBackend.DomainPets.Domain.Models;
 using GrupoWebBackend.DomainPublications.Domain.Models;
@@ -91,10 +92,12 @@ namespace GrupoWebBackend.Shared.Persistence.Context
             builder.Entity<AdoptionsRequests>().HasKey(p => p.Id);
             builder.Entity<AdoptionsRequests>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<AdoptionsRequests>().Property(p => p.Message).IsRequired();
-            builder.Entity<AdoptionsRequests>().Property(p => p.Message).HasMaxLength(300).IsRequired();
+          //  builder.Entity<AdoptionsRequests>().Property(p => p.Message).HasMaxLength(300).IsRequired();
             builder.Entity<AdoptionsRequests>().Property(p => p.Status).IsRequired();
-
-            
+            //builder.Entity<AdoptionsRequests>().Property(p => p.Status).HasMaxLength(30).IsRequired();
+            builder.Entity<AdoptionsRequests>().Property(p =>p.UserIdFrom).IsRequired();
+            builder.Entity<AdoptionsRequests>().Property(p => p.UserIdAt).IsRequired();
+            builder.Entity<AdoptionsRequests>().Property(p =>p.PublicationId).IsRequired(false);
             // Districts
             builder.Entity<District>().ToTable("Districts");
             builder.Entity<District>().HasKey(p => p.Id);
@@ -134,10 +137,16 @@ namespace GrupoWebBackend.Shared.Persistence.Context
             //AdoptionsRequests Relations 
             builder.Entity<User>().HasMany(p => p.AdoptionsRequestsList)
                 .WithOne(p => p.User)
-                .HasForeignKey(p => p.UserId);
+                .HasForeignKey(p => p.UserIdFrom);
+          
+          /*  builder.Entity<User>().HasMany(p => p.AdoptionsRequestsList)
+                .WithOne(p => p.User)
+                .HasForeignKey(p => p.UserIdAt);
 
-
-            
+            builder.Entity<Publication>().HasMany(p => p.AdoptionsRequestsList)
+                .WithOne(p => p.Publication)
+                .HasForeignKey(p => p.PublicationId);
+*/
             /*builder.Entity<District>().HasData(
                 new District
                 {
@@ -150,7 +159,7 @@ namespace GrupoWebBackend.Shared.Persistence.Context
                     DistrictName = "San Miguel"
                 }
             );*/
-            
+
             /*builder.Entity<User>().HasData(
                 new User
                 {

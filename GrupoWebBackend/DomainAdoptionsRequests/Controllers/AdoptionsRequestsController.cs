@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -34,16 +35,20 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Controllers
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SaveAdoptionsRequestsResource resource)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState.GetErrorMessages());
+    
+
+           // if (!ModelState.IsValid)
+             //   return BadRequest(ModelState.GetErrorMessages());
             var adoptionRequest = _mapper.Map<SaveAdoptionsRequestsResource, AdoptionsRequests>(resource);
-            var result = await _adoptionsRequestsService.SaveAsync(adoptionRequest);
+            var result = await _adoptionsRequestsService.AddAsync(adoptionRequest);
 
-            if (!result.Success)
-                return BadRequest(result.Message);
+        //    if (!result.Success)
+          //      return BadRequest(result.Message);
 
-            var adoptionRequestResource = _mapper.Map<AdoptionsRequests, AdoptionsRequestsResource>(result.Resource);
+            var adoptionRequestResource = _mapper.Map<AdoptionsRequests, AdoptionsRequestsResource>(result.AdoptionsRequests);
             return Ok(adoptionRequestResource);
+            
+            
         }
         
         [HttpPut("{id}")]

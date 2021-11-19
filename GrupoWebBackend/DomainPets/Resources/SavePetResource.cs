@@ -19,7 +19,7 @@ namespace GrupoWebBackend.DomainPets.Resources
         public bool IsAdopted {get; set; }
         [Required]
         public int UserId { get; set; }
-        [AllowNull]
-        public int PublicationId { get; set; }
+        
+        public int? PublicationId { get; set; }
     }
 }
