@@ -3444,3 +3444,24 @@ C:\Users\Dyland\Downloads\GrupoWebBackend\GrupoWebBackend.Tests\obj\Debug\net5.0
 C:\Users\Dyland\Downloads\GrupoWebBackend\GrupoWebBackend.Tests\obj\Debug\net5.0\ref\GrupoWebBackend.Tests.dll
 C:\Users\Dyland\Downloads\GrupoWebBackend\GrupoWebBackend.Tests\obj\Debug\net5.0\GrupoWebBackend.Tests.pdb
 C:\Users\Dyland\Downloads\GrupoWebBackend\GrupoWebBackend.Tests\obj\Debug\net5.0\GrupoWebBackend.Tests.genruntimeconfig.cache
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\BCrypt.Net-Next.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Castle.Core.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\FluentAssertions.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\K4os.Compression.LZ4.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\K4os.Compression.LZ4.Streams.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\K4os.Hash.xxHash.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Moq.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\MySql.Data.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Ubiety.Dns.Core.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\ZstdNet.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\MySql.EntityFrameworkCore.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+E:\CICLO-2021-2\APLICACIONES WEB\BACKEND TRABAJO\GrupoWebBackend\GrupoWebBackend.Tests\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

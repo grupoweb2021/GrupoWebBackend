@@ -100,7 +100,58 @@ namespace GrupoWebBackend.Tests
                     "publication-adding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Post a publication", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 12
+#line 9
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+    this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                            "PetId",
+                            "UserId",
+                            "DateTime",
+                            "Comment"});
+                table12.AddRow(new string[] {
+                            "1",
+                            "4",
+                            "29/09/2021 16:20",
+                            "This is a test comment"});
+#line 10
+        testRunner.When("A publication is sent", ((string)(null)), table12, "When ");
+#line hidden
+#line 13
+        testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Post a publication with incorrect json body")]
+        [Xunit.TraitAttribute("FeatureTitle", "PublicationServiceTests")]
+        [Xunit.TraitAttribute("Description", "Post a publication with incorrect json body")]
+        public virtual void PostAPublicationWithIncorrectJsonBody()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Post a publication with incorrect json body", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 15
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -124,34 +175,34 @@ namespace GrupoWebBackend.Tests
     this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
-                            "PetId",
-                            "UserId",
-                            "DateTime",
-                            "Comment"});
+                            "petId",
+                            "userId",
+                            "dateTime",
+                            "conment"});
                 table13.AddRow(new string[] {
                             "1",
                             "1",
                             "29/09/2021 16:20",
                             "This is a test comment"});
-#line 13
+#line 16
         testRunner.When("A publication is sent", ((string)(null)), table13, "When ");
 #line hidden
-#line 16
-        testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 19
+        testRunner.Then("a response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Post a publication go wrong")]
+        [Xunit.SkippableFactAttribute(DisplayName="Update a publication with correct id and body")]
         [Xunit.TraitAttribute("FeatureTitle", "PublicationServiceTests")]
-        [Xunit.TraitAttribute("Description", "Post a publication go wrong")]
-        public virtual void PostAPublicationGoWrong()
+        [Xunit.TraitAttribute("Description", "Update a publication with correct id and body")]
+        public virtual void UpdateAPublicationWithCorrectIdAndBody()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Post a publication go wrong", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 18
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update a publication with correct id and body", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 21
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -174,20 +225,165 @@ namespace GrupoWebBackend.Tests
 #line 5
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
-                            "petId",
-                            "userId",
-                            "dateTime",
-                            "conment"});
-                table14.AddRow(new string[] {
-                            "1",
-                            "1",
-                            "29/09/2021 16:20",
-                            "This is a test comment"});
-#line 19
-        testRunner.When("A publication is sent", ((string)(null)), table14, "When ");
-#line hidden
 #line 22
+        testRunner.Given("the endpoint https://localhost:5001/api/v1/publications/2 is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                            "PetId",
+                            "UserId",
+                            "DateTime",
+                            "Comment"});
+                table14.AddRow(new string[] {
+                            "2",
+                            "4",
+                            "date updated",
+                            "This is a test comment updated"});
+#line 23
+        testRunner.When("An update  publication is sent", ((string)(null)), table14, "When ");
+#line hidden
+#line 26
+        testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Update a publication with wrong publication id")]
+        [Xunit.TraitAttribute("FeatureTitle", "PublicationServiceTests")]
+        [Xunit.TraitAttribute("Description", "Update a publication with wrong publication id")]
+        public virtual void UpdateAPublicationWithWrongPublicationId()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update a publication with wrong publication id", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 28
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+    this.FeatureBackground();
+#line hidden
+#line 29
+        testRunner.Given("the endpoint https://localhost:5001/api/v1/publications/1 is not available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                            "PetId",
+                            "UserId",
+                            "DateTime",
+                            "Comment"});
+                table15.AddRow(new string[] {
+                            "2",
+                            "0",
+                            "date updated",
+                            "This is a test comment updated"});
+#line 30
+        testRunner.When("An update  publication is sent", ((string)(null)), table15, "When ");
+#line hidden
+#line 33
+        testRunner.Then("a response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Delete a publication")]
+        [Xunit.TraitAttribute("FeatureTitle", "PublicationServiceTests")]
+        [Xunit.TraitAttribute("Description", "Delete a publication")]
+        public virtual void DeleteAPublication()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete a publication", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 35
+  this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+    this.FeatureBackground();
+#line hidden
+#line 36
+      testRunner.Given("the endpoint https://localhost:5001/api/v1/publications/2 is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 37
+      testRunner.When("An a delete request is sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 38
+      testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Delete a publication go wrong")]
+        [Xunit.TraitAttribute("FeatureTitle", "PublicationServiceTests")]
+        [Xunit.TraitAttribute("Description", "Delete a publication go wrong")]
+        public virtual void DeleteAPublicationGoWrong()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete a publication go wrong", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 40
+  this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+    this.FeatureBackground();
+#line hidden
+#line 41
+        testRunner.Given("the endpoint https://localhost:5001/api/v1/publications/1 is not available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 42
+        testRunner.When("An a delete request is sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 43
         testRunner.Then("a response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
