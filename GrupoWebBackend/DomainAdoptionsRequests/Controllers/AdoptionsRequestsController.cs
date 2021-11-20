@@ -78,5 +78,19 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Controllers
             return Ok(adoptionRequestResource);
 
         }
+
+        [HttpGet("userIdFrom={useridfrom}")]
+        public async Task<IEnumerable<AdoptionsRequests>> GetbyIdFrom(int useridfrom)
+        {
+                var result = await _adoptionsRequestsService.getAllUserFrom(useridfrom);
+                return result;
+        }
+        
+        [HttpGet("userIdAt={useridat}")]
+        public async Task<IEnumerable<AdoptionsRequests>> GetbyIdAt(int useridat)
+        {
+            var result = await _adoptionsRequestsService.getAllUserAt(useridat);
+            return result;
+        }
     }
 }

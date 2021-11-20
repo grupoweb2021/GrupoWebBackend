@@ -81,5 +81,10 @@ namespace GrupoWebBackend.Tests
             var content = new StringContent(resource.ToJson(), Encoding.UTF8, MediaTypeNames.Application.Json);
             Response = _client.PostAsync(_baseUri, content);
         }
+
+        [When(@"An a delete request of adoptions requests is sent")]
+        public void WhenAnADeleteRequestOfAdoptionsRequestsIsSent(Table table)
+        {
+                 }
     }
 }

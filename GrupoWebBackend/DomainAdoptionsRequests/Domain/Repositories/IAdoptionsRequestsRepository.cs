@@ -16,7 +16,11 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Domain.Repositories
         
         void Remove(AdoptionsRequests adoptionsRequests);
 
-       // Task<IEnumerable<AdoptionsRequests>> FindByAdoptionsRequests(int adoptionsRequestsId);
+        Task<IEnumerable<AdoptionsRequests>> getAllUserAtNotifications(int id);
+        
+        Task<IEnumerable<AdoptionsRequests>> getAllUserFromNotifications(int id);
+
+        // Task<IEnumerable<AdoptionsRequests>> FindByAdoptionsRequests(int adoptionsRequestsId);
 
     }
 }

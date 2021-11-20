@@ -12,6 +12,8 @@ using System.Linq;
 using GrupoWebBackend.DomainAdoptionsRequests.Domain.Services.Communications;
 using GrupoWebBackend.DomainPublications.Domain.Repositories;
 using GrupoWebBackend.Shared.Domain.Repositories;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GrupoWebBackend.DomainAdoptionsRequests.Services
 {
@@ -74,14 +76,34 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Services
           return new AdoptionsRequestsResponse(existingAdoptionsRequests);
       }
 
+      public async Task<IEnumerable<AdoptionsRequests>> getAllUserAt(int id)
+      {
+              var result = await _requestsAdoptionsRepository.getAllUserAtNotifications(id);
+              return result;
+      }
+      public async Task<IEnumerable<AdoptionsRequests>> getAllUserFrom(int id)
+      {
+          var result = await _requestsAdoptionsRepository.getAllUserFromNotifications(id);
+          return result;      
+      }
+
       public async Task<AdoptionsRequestsResponse> DeleteAsync(int id)
       {
           var existingAdoptionsRequests = await _requestsAdoptionsRepository.FindByIdAsync(id);
 
           if (existingAdoptionsRequests == null)
               return new AdoptionsRequestsResponse("Adoptions Requests not found");
-          _requestsAdoptionsRepository.Remove(existingAdoptionsRequests);
-          return new AdoptionsRequestsResponse(existingAdoptionsRequests);
+
+          try
+          {
+              _requestsAdoptionsRepository.Remove(existingAdoptionsRequests);
+              await _unitOfWork.CompleteAsync();
+              return new AdoptionsRequestsResponse(existingAdoptionsRequests);
+          }
+          catch(Exception e)
+          {
+              return new AdoptionsRequestsResponse($"An error occurred while deleting the pet: {e.Message}");
+          }
       }
     }
 }
