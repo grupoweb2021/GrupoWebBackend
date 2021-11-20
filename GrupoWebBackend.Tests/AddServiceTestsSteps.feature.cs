@@ -40,7 +40,7 @@ namespace GrupoWebBackend.Tests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "AddServiceTestsSteps", "\tAs a developer\r\n\tI want to publish adds through API\r\n\tSo that I can get buyers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "AddServiceTestsSteps", "As a developer\r\nI want to publish adds through API\r\nSo that I can get buyers", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -78,36 +78,9 @@ namespace GrupoWebBackend.Tests
         public virtual void FeatureBackground()
         {
 #line 5
-#line hidden
+    #line hidden
 #line 6
- testRunner.Given("the endpoint https://localhost:5001/api/v1/Advertisements is available.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Id",
-                        "Type",
-                        "UserNick",
-                        "Pass",
-                        "Ruc",
-                        "Dni",
-                        "Phone",
-                        "Email",
-                        "Name",
-                        "LastName",
-                        "DistrictId"});
-            table1.AddRow(new string[] {
-                        "1",
-                        "VET",
-                        "Frank",
-                        "Password",
-                        "A12345rf",
-                        "70258688",
-                        "946401234",
-                        "frank@outlook.com",
-                        "Francisco",
-                        "Voularte",
-                        "1"});
-#line 7
- testRunner.And("A User is already stored for Advertisement", ((string)(null)), table1, "And ");
+        testRunner.Given("the endpoint https://localhost:5001/api/v1/Advertisements is available.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -126,8 +99,8 @@ namespace GrupoWebBackend.Tests
                     "advertisement2-adding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add An Advertisement", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 11
-this.ScenarioInitialize(scenarioInfo);
+#line 10
+    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -147,9 +120,9 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 5
-this.FeatureBackground();
+    this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "DateTime",
                             "Title",
                             "Description",
@@ -157,19 +130,19 @@ this.FeatureBackground();
                             "UrlToImage",
                             "Promoted",
                             "UserId"});
-                table2.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "29/09/2021 16:20",
-                            "this is a title",
+                            "hola",
                             "add description",
                             "10",
                             "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
                             "true",
                             "1"});
-#line 12
- testRunner.When("A Post Request of Advertisement is sent", ((string)(null)), table2, "When ");
+#line 11
+        testRunner.When("A Post Request of Advertisement is sent", ((string)(null)), table1, "When ");
 #line hidden
-#line 15
- testRunner.Then("An Advertisement response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+        testRunner.Then("An Advertisement response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -183,8 +156,8 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add An Advertisement with empty data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 17
- this.ScenarioInitialize(scenarioInfo);
+#line 16
+    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -204,7 +177,111 @@ this.FeatureBackground();
             {
                 this.ScenarioStart();
 #line 5
-this.FeatureBackground();
+    this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "DateTime",
+                            "Title",
+                            "Description",
+                            "Discount",
+                            "UrlToImage",
+                            "Promoted",
+                            "UserId"});
+                table2.AddRow(new string[] {
+                            "29/09/2021 16:20",
+                            "",
+                            "add description",
+                            "10",
+                            "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
+                            "true",
+                            "1"});
+#line 17
+        testRunner.When("A Post Request of Advertisement is sent", ((string)(null)), table2, "When ");
+#line hidden
+#line 20
+        testRunner.Then("An Advertisement response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Delete An Advertisement")]
+        [Xunit.TraitAttribute("FeatureTitle", "AddServiceTestsSteps")]
+        [Xunit.TraitAttribute("Description", "Delete An Advertisement")]
+        public virtual void DeleteAnAdvertisement()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete An Advertisement", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 22
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+    this.FeatureBackground();
+#line hidden
+#line 23
+        testRunner.Given("the endpoint https://localhost:5001/api/v1/Advertisements/1 is available.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 24
+        testRunner.When("an a deleting request is sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 25
+        testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Update An Advertisement with correct id and body")]
+        [Xunit.TraitAttribute("FeatureTitle", "AddServiceTestsSteps")]
+        [Xunit.TraitAttribute("Description", "Update An Advertisement with correct id and body")]
+        public virtual void UpdateAnAdvertisementWithCorrectIdAndBody()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update An Advertisement with correct id and body", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 27
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+    this.FeatureBackground();
+#line hidden
+#line 28
+        testRunner.Given("the endpoint https://localhost:5001/api/v1/Advertisements/1 is available.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "DateTime",
@@ -216,93 +293,17 @@ this.FeatureBackground();
                             "UserId"});
                 table3.AddRow(new string[] {
                             "29/09/2021 16:20",
-                            "",
-                            "add description",
-                            "10",
-                            "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
-                            "true",
-                            "1"});
-#line 18
-  testRunner.When("A Post Request of Advertisement is sent", ((string)(null)), table3, "When ");
-#line hidden
-#line 21
-  testRunner.Then("An Advertisement response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Add an Advertisement with the same Title")]
-        [Xunit.TraitAttribute("FeatureTitle", "AddServiceTestsSteps")]
-        [Xunit.TraitAttribute("Description", "Add an Advertisement with the same Title")]
-        public virtual void AddAnAdvertisementWithTheSameTitle()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add an Advertisement with the same Title", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 23
-  this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 5
-this.FeatureBackground();
-#line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                            "DateTime",
-                            "Title",
-                            "Description",
-                            "Discount",
-                            "UrlToImage",
-                            "Promoted",
-                            "UserId"});
-                table4.AddRow(new string[] {
-                            "29/09/2021 16:20",
                             "hola",
                             "add description",
                             "10",
                             "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
                             "true",
                             "1"});
-#line 24
-   testRunner.Given("An advertisement is already stored", ((string)(null)), table4, "Given ");
+#line 29
+        testRunner.When("An update Advertising request is sent", ((string)(null)), table3, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "DateTime",
-                            "Title",
-                            "Description",
-                            "Discount",
-                            "UrlToImage",
-                            "Promoted",
-                            "UserId"});
-                table5.AddRow(new string[] {
-                            "29/09/2021 16:20",
-                            "hola",
-                            "add description",
-                            "10",
-                            "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
-                            "true",
-                            "2"});
-#line 27
-   testRunner.When("A Post Request of Advertisement is sent", ((string)(null)), table5, "When ");
-#line hidden
-#line 30
-   testRunner.Then("An Advertisement response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 32
+        testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
