@@ -123,18 +123,18 @@ namespace GrupoWebBackend.Tests
 #line 5
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "PetId",
                             "UserId",
                             "DateTime",
                             "Comment"});
-                table12.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "1",
                             "1",
                             "29/09/2021 16:20",
                             "This is a test comment"});
 #line 13
-        testRunner.When("A publication is sent", ((string)(null)), table12, "When ");
+        testRunner.When("A publication is sent", ((string)(null)), table13, "When ");
 #line hidden
 #line 16
         testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -174,18 +174,18 @@ namespace GrupoWebBackend.Tests
 #line 5
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                             "petId",
                             "userId",
                             "dateTime",
                             "conment"});
-                table13.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "1",
                             "1",
                             "29/09/2021 16:20",
                             "This is a test comment"});
 #line 19
-        testRunner.When("A publication is sent", ((string)(null)), table13, "When ");
+        testRunner.When("A publication is sent", ((string)(null)), table14, "When ");
 #line hidden
 #line 22
         testRunner.Then("a response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
