@@ -23,3 +23,9 @@ Scenario: Add Adoption Request with same data
 	  | Message | Status  | UserIdFrom | UserId | PublicationId |
 	  | hello   | pending | 2          |1       |1              |
 	Then AAdoptionRequests With Status 200 is received
+	
+  Scenario: Delete a adoptions request dont available
+        When An a delete request of adoptions requests is sent   
+          | Message | Status  | UserIdFrom | UserId | PublicationId |
+          | hello   | pending | 2          |2       |18              |
+        Then a response with status 400 is received

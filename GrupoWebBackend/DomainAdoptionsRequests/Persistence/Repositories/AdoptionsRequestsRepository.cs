@@ -1,6 +1,7 @@
 ﻿using GrupoWebBackend.DomainAdoptionsRequests.Domain.Repositories;
 using GrupoWebBackend.Shared.Persistence.Context;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using GrupoWebBackend.DomainAdoptionsRequests.Domain.Models;
 using GrupoWebBackend.Shared.Persistence.Repositories;
@@ -40,5 +41,13 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Persistence.Repositories
             _context.AdoptionsRequests.Remove(adoptionsRequests);
         }
 
-    }
+        public async Task<IEnumerable<AdoptionsRequests>> getAllUserAtNotifications(int id)
+        {
+            return  _context.AdoptionsRequests.Where(e=>e.UserIdAt==id);
+        }
+
+        public async Task<IEnumerable<AdoptionsRequests>> getAllUserFromNotifications(int id)
+        {
+            return  _context.AdoptionsRequests.Where(e=>e.UserIdFrom==id);        }
+        }
 }
