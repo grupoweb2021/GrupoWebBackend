@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Mime;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using GrupoWebBackend.DomainAdvertisements.Resources;
@@ -24,7 +25,11 @@ namespace GrupoWebBackend.Tests
         private Uri BaseUri { get; set; }
         private UserResource User { get; set; }
         private AdvertisementResource Advertisement { get; set; }
-        private Task<HttpResponseMessage> Response { get; set; }
+        private ConfiguredTaskAwaitable<HttpResponseMessage> Response
+        {
+            get;
+            set;
+        }
         public AddRequestServiceTestsSteps(WebApplicationFactory<Startup> factory)
         {
             _factory = factory;
@@ -42,15 +47,14 @@ namespace GrupoWebBackend.Tests
         {
             var resource = savePostResource.CreateSet<SaveAdvertisementResource>().First();
             var content = new StringContent(resource.ToJson(), Encoding.UTF8, MediaTypeNames.Application.Json);
-            Response = Client.PostAsync(BaseUri, content);
+            Response = Client.PostAsync(BaseUri, content).ConfigureAwait(false);
         }
 
         [Then(@"An Advertisement response with status (.*) is received")]
         public void ThenAnAdvertisementResponseWithStatusIsReceived(int expectedStatus)
         {
-            var expectedStatusCode = ((HttpStatusCode) expectedStatus).ToString();
-            var actualStatuCode = Response.Result.StatusCode.ToString();
-            Assert.AreEqual(expectedStatusCode, actualStatuCode);
+            HttpStatusCode statusCode = (HttpStatusCode) expectedStatus;
+            Assert.AreEqual(statusCode.ToString(), Response.GetAwaiter().GetResult().StatusCode.ToString());
         }
 
         [Given(@"A User is already stored for Advertisement")]
@@ -76,6 +80,25 @@ namespace GrupoWebBackend.Tests
             Advertisement = existingAdvertisement;
 
         }
-        
+        [When(@"an a deleting request is sent")]
+        public void WhenAnADeletingRequestIsSent()
+        {
+            Response = Client.DeleteAsync(BaseUri).ConfigureAwait(false);
+        }
+        [Given(@"the endpoint https://localhost:(.*)/api/v(.*)/Advertisements/(.*) is available\.")]
+        public void GivenTheEndpointHttpsLocalhostApiVAdvertisementsIsAvailable(int port, int version, int id)
+        {
+           BaseUri = new Uri($"https://localhost:{port}/api/v{version}/publications/{id}");
+           Client = _factory.CreateClient(new WebApplicationFactoryClientOptions{BaseAddress = BaseUri});
+        }
+
+
+        [When(@"An update Advertising request is sent")]
+        public void WhenAnUpdateAdvertisingRequestIsSent(Table table)
+        {
+            var resource = table.CreateSet<SaveAdvertisementResource>().First();
+            var content = new StringContent(resource.ToJson(), Encoding.UTF8, "application/json");
+            Response = Client.PutAsync(BaseUri, content).ConfigureAwait(false);
+        }
     }
 }

@@ -83,7 +83,7 @@ namespace GrupoWebBackend.Tests
 #line 6
   testRunner.Given("The Endpoint https://localhost:5001/api/v1/AdoptionsRequests is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Id",
                         "Type",
                         "UserNick",
@@ -95,7 +95,7 @@ namespace GrupoWebBackend.Tests
                         "Name",
                         "LastName",
                         "DistrictId"});
-            table6.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "1",
                         "VET",
                         "Frank",
@@ -108,7 +108,7 @@ namespace GrupoWebBackend.Tests
                         "Voularte",
                         "1"});
 #line 7
-  testRunner.And("A User is already stored for AdoptionsRequests", ((string)(null)), table6, "And ");
+  testRunner.And("A User is already stored for AdoptionsRequests", ((string)(null)), table4, "And ");
 #line hidden
         }
         
@@ -150,20 +150,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Message",
                             "Status",
                             "UserIdFrom",
                             "UserId",
                             "PublicationId"});
-                table7.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "hello",
                             "pending",
                             "2",
                             "1",
                             "1"});
 #line 12
- testRunner.When("A adoption request is sent", ((string)(null)), table7, "When ");
+ testRunner.When("A adoption request is sent", ((string)(null)), table5, "When ");
 #line hidden
 #line 15
  testRunner.Then("A Response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -203,14 +203,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Message",
                             "Status"});
-                table8.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "hello",
                             ""});
 #line 17
- testRunner.When("A post adoption request is sent", ((string)(null)), table8, "When ");
+ testRunner.When("A post adoption request is sent", ((string)(null)), table6, "When ");
 #line hidden
 #line 20
  testRunner.Then("AAdoptionRequests With Status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -250,20 +250,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Message",
                             "Status",
                             "UserIdFrom",
                             "UserId",
                             "PublicationId"});
-                table9.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "hello",
                             "pending",
                             "2",
                             "1",
                             "1"});
 #line 22
- testRunner.When("A post adoption request is sent", ((string)(null)), table9, "When ");
+ testRunner.When("A post adoption request is sent", ((string)(null)), table7, "When ");
 #line hidden
 #line 25
  testRunner.Then("AAdoptionRequests With Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -303,20 +303,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Message",
                             "Status",
                             "UserIdFrom",
                             "UserId",
                             "PublicationId"});
-                table10.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "hello",
                             "pending",
                             "2",
                             "2",
                             "18"});
 #line 28
-        testRunner.When("An a delete request of adoptions requests is sent", ((string)(null)), table10, "When ");
+        testRunner.When("An a delete request of adoptions requests is sent", ((string)(null)), table8, "When ");
 #line hidden
 #line 31
         testRunner.Then("a response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
