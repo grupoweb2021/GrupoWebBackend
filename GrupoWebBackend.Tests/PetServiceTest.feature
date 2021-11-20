@@ -11,7 +11,7 @@ So that it is available when wanting to make publications.
 Scenario: Add Pet
 	When A Post Request is sent
 	  | Type | Name | Attention | Race    | Age | IsAdopted | UserId | PublicationId |
-	  | Can  | Lolo | Yes       | Pitbull | 2   | false     | 3      | 1             |
+	  | Can  | Lolo | Yes       | Pitbull | 2   | false     | 1      | 1             |
 	Then A Response With Status 200 is received
 	
 Scenario: Add Pet with empty data
