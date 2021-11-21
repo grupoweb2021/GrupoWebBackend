@@ -325,6 +325,89 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.SkippableFactAttribute(DisplayName="Database update its information when there is a new candidate for adopting")]
+        [Xunit.TraitAttribute("FeatureTitle", "AdoptionsRequestsServiceTests")]
+        [Xunit.TraitAttribute("Description", "Database update its information when there is a new candidate for adopting")]
+        public virtual void DatabaseUpdateItsInformationWhenThereIsANewCandidateForAdopting()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Database update its information when there is a new candidate for adopting", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 33
+       this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+ this.FeatureBackground();
+#line hidden
+#line 34
+   testRunner.Given("the endpoint https://localhost:5001/api/v1/AdoptionsRequests/1 is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Id",
+                            "Type",
+                            "UserNick",
+                            "Pass",
+                            "Ruc",
+                            "Dni",
+                            "Phone",
+                            "Email",
+                            "Name",
+                            "LastName",
+                            "DistrictId"});
+                table9.AddRow(new string[] {
+                            "2",
+                            "client",
+                            "an",
+                            "Password",
+                            "A12345rf",
+                            "70258688",
+                            "946401234",
+                            "ana@gmail.com",
+                            "Ana",
+                            "Araoz",
+                            "1"});
+#line 35
+        testRunner.And("A User is already stored for AdoptionsRequests", ((string)(null)), table9, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Message",
+                            "Status",
+                            "UserIdFrom",
+                            "UserId",
+                            "PublicationId"});
+                table10.AddRow(new string[] {
+                            "hello",
+                            "pending",
+                            "2",
+                            "1",
+                            "1"});
+#line 38
+   testRunner.When("An update  adoption request is sent", ((string)(null)), table10, "When ");
+#line hidden
+#line 41
+        testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable
