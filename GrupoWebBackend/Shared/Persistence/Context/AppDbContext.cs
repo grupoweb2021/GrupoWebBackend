@@ -48,12 +48,12 @@ namespace GrupoWebBackend.Shared.Persistence.Context
             builder.Entity<User>().Property(p => p.UserNick).IsRequired();
             builder.Entity<User>().Property(p => p.Type).IsRequired();
             builder.Entity<User>().Property(p => p.Email).IsRequired();
-            builder.Entity<User>().Property(p => p.Phone).IsRequired();
-            builder.Entity<User>().Property(p => p.DistrictId).IsRequired();
-            builder.Entity<User>().Property(p => p.Dni).IsRequired();
-            builder.Entity<User>().Property(p => p.Ruc).IsRequired();
-            builder.Entity<User>().Property(p => p.Name).IsRequired();
-            builder.Entity<User>().Property(p => p.LastName).IsRequired();
+            builder.Entity<User>().Property(p => p.Phone).IsRequired(false);
+            builder.Entity<User>().Property(p => p.DistrictId).IsRequired(false);
+            builder.Entity<User>().Property(p => p.Dni).IsRequired(false);
+            builder.Entity<User>().Property(p => p.Ruc).IsRequired(false);
+            builder.Entity<User>().Property(p => p.Name).IsRequired(false);
+            builder.Entity<User>().Property(p => p.LastName).IsRequired(false);
             builder.Entity<User>().Property(p => p.UrlToImageBackground).IsRequired(false);
             builder.Entity<User>().Property(p => p.UrlToImageProfile).IsRequired(false);
 
