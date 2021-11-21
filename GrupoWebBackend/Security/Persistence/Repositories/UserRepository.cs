@@ -54,5 +54,11 @@ namespace GrupoWebBackend.Security.Persistence.Repositories
         {
             _context.Users.Remove(user);
         }
+
+        public void UpdateUser(User user)
+        {
+            _context.Users.Update(user);
+        }
+
     }
 }

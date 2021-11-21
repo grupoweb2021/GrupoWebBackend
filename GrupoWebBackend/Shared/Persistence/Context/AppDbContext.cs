@@ -54,7 +54,9 @@ namespace GrupoWebBackend.Shared.Persistence.Context
             builder.Entity<User>().Property(p => p.Ruc).IsRequired();
             builder.Entity<User>().Property(p => p.Name).IsRequired();
             builder.Entity<User>().Property(p => p.LastName).IsRequired();
-            
+            builder.Entity<User>().Property(p => p.UrlToImageBackground).IsRequired(false);
+            builder.Entity<User>().Property(p => p.UrlToImageProfile).IsRequired(false);
+
             // Pet Constraints
             builder.Entity<Pet>().ToTable("Pets");
             builder.Entity<Pet>().HasKey(p => p.Id);
@@ -63,11 +65,13 @@ namespace GrupoWebBackend.Shared.Persistence.Context
             builder.Entity<Pet>().Property(p => p.Name).IsRequired();
             builder.Entity<Pet>().Property(p => p.Attention).IsRequired();
             builder.Entity<Pet>().Property(p => p.Age).IsRequired();
+            builder.Entity<Pet>().Property(p => p.UserId).IsRequired();
             builder.Entity<Pet>().Property(p => p.Race).IsRequired();
             builder.Entity<Pet>().Property(p => p.IsAdopted).IsRequired();
             builder.Entity<Pet>().Property(p => p.PublicationId).IsRequired(false);
-
-
+            builder.Entity<Pet>().Property(p => p.IsPublished).IsRequired();
+            builder.Entity<Pet>().Property(p => p.Gender).IsRequired();
+            builder.Entity<Pet>().Property(p => p.UrlToImage).IsRequired(false);
             //Advertisement Constraints
             builder.Entity<Advertisement>().ToTable("Advertisements");
             builder.Entity<Advertisement>().HasKey(p => p.Id);
@@ -112,6 +116,10 @@ namespace GrupoWebBackend.Shared.Persistence.Context
             // Pet Relations
             builder.Entity<User>().HasMany(p => p.Pets)
                 .WithOne(p => p.User)
+                .HasForeignKey(p => p.UserId);
+
+            builder.Entity<Pet>().HasOne(p => p.User)
+                .WithMany(p => p.Pets)
                 .HasForeignKey(p => p.UserId);
             
             //Advertisement Relations

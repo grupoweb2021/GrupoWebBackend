@@ -60,18 +60,36 @@ namespace GrupoWebBackend.DomainPublications.Services
             existingPublication.DateTime = publication.DateTime;
             existingPublication.PetId = publication.PetId;
             existingPublication.UserId = publication.UserId;
-            _publicationRepository.Update(existingPublication);
-            return new PublicationResponse(existingPublication);
+            
+            try
+            {
+                _publicationRepository.Update(existingPublication);
+                await _unitOfWork.CompleteAsync();
+                return new PublicationResponse(existingPublication);
+            }
+            catch (Exception e)
+            {
+                return new PublicationResponse($"An error occurred while saving Publication: {e.Message}");
+            }
+            
         }
 
         public async Task<PublicationResponse> DeleteAsync(int id)
         {
-            var existingPublication = await _publicationRepository.FindByIdAsync(id);
 
+            var existingPublication = await _publicationRepository.FindByIdAsync(id);
             if (existingPublication == null)
-                return new PublicationResponse("Publication not Found");
-            _publicationRepository.Remove(existingPublication);
-            return new PublicationResponse(existingPublication);
+                return new PublicationResponse("Pet not found.");
+            try
+            {
+                _publicationRepository.Remove(existingPublication);
+                await _unitOfWork.CompleteAsync();
+                return new PublicationResponse(existingPublication);
+            }
+            catch (Exception e)
+            {
+                return new PublicationResponse($"An error occurred while deleting the publication: {e.Message}");
+            }
         }
     }
 }

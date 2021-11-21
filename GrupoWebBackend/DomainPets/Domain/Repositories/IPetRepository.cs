@@ -14,7 +14,7 @@ namespace GrupoWebBackend.DomainPets.Domain.Repositories
         Task AddAsync(Pet pet);
         void UpdateAsync(Pet pet);
         void Delete(Pet pet);
-        IEnumerable<Pet> GetPet(string race, int age);
+        IEnumerable<Pet> GetPet(int userId);
         
         
     }

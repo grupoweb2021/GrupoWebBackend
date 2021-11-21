@@ -49,7 +49,7 @@ namespace GrupoWebBackend.DomainPublications.Controllers
             var publicationResource = _mapper.Map<Publication, PublicationResource>(result.Resource);
             return Ok(publicationResource);
         }
-        [HttpPut (template:"{id}")]
+        [HttpPut ("{id:int}")]
         [SwaggerOperation(Summary="Update a publication",Tags= new [] {"Publications"})]
         public async Task<IActionResult> PutAsync (int id, [FromBody] SavePublicationResource resource)
         {
@@ -67,7 +67,7 @@ namespace GrupoWebBackend.DomainPublications.Controllers
             return Ok(categoryResource);
             
         }
-        [HttpDelete(template:"{id}")]
+        [HttpDelete("{id:int}")]
         [SwaggerOperation(Summary="Delete a specific publications",Tags= new [] {"Publications"})]
         public async Task<IActionResult>DeleteAsync(int id)
         {
