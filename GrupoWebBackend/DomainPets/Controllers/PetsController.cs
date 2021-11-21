@@ -4,6 +4,7 @@ using AutoMapper;
 using GrupoWebBackend.DomainPets.Domain.Models;
 using GrupoWebBackend.DomainPets.Domain.Services;
 using GrupoWebBackend.DomainPublications.Domain.Models;
+using GrupoWebBackend.Security.Authorization.Attributes;
 using GrupoWebBackend.Extensions;
 using GrupoWebBackend.DomainPets.Resources;
 using Microsoft.AspNetCore.Mvc;
@@ -72,10 +73,10 @@ namespace GrupoWebBackend.DomainPets.Controllers
             
         }
 
-        [HttpGet("race={race}&&age={age:int}")]
-        public IEnumerable<Pet> GetPets(string race, int age)
+        [HttpGet("userId={userId:int}")]
+        public IEnumerable<Pet> GetPets(int userId)
         {
-            return _petService.GetPet(race, age);
+            return _petService.GetPet(userId);
         }
 
         [HttpDelete("{id:int}")]

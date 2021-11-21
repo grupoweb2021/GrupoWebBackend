@@ -15,7 +15,8 @@ namespace GrupoWebBackend.Security.Domain.Services.Communication
         public string Email { get; set; }
         public int DistrictId { get; set; }
         public string Token { get; set; }
-
+        public string? UrlToImageBackground { get; set; }
+        public string? UrlToImageProfile { get; set; }
         protected AuthenticateResponse(User user, string token)
         {
             Id = user.Id;
@@ -29,6 +30,8 @@ namespace GrupoWebBackend.Security.Domain.Services.Communication
             Email = user.Email;
             DistrictId = user.DistrictId;
             Token = token;
+            UrlToImageBackground = user.UrlToImageBackground;
+            UrlToImageProfile = user.UrlToImageProfile;
         }
 
         protected AuthenticateResponse()

@@ -12,5 +12,8 @@ namespace GrupoWebBackend.Security.Domain.Services.Communication
         public string Phone { get; set; }
         public string Email { get; set; }
         public int DistrictId { get; set; }
+        public string? UrlToImageBackground { get; set; }
+        public string? UrlToImageProfile { get; set; }
+        public UpdateRequest(){}
     }
 }

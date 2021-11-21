@@ -77,9 +77,9 @@ namespace GrupoWebBackend.DomainPets.Services
             }
         }
 
-        public IEnumerable<Pet> GetPet(string race, int age)
+        public IEnumerable<Pet> GetPet(int userId)
         {
-            return _petRepository.GetPet(race, age);
+            return _petRepository.GetPet(userId);
         }
 
         public async Task<PetResponse> DeleteAsync(int id)

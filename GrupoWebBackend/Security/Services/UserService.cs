@@ -78,7 +78,7 @@ namespace GrupoWebBackend.Security.Services
             {
                 await _userRepository.AddAsync(user);
                 await _unitOfWork.CompleteAsync();
-            }
+            }   
             catch(Exception e)
             {
                 throw new AppException($"An error occurred while saving the user: {e.Message}");
@@ -133,6 +133,34 @@ namespace GrupoWebBackend.Security.Services
             return user;
         }
 
+
+        public async Task<UserResponse> UpdateUser(User user, int id)
+        {
+            var existingPet = await _userRepository.FindByIdAsync(id);
+            if (existingPet == null)
+                return new UserResponse("Pet not found");
+            existingPet.Type = user.Type;
+            existingPet.UserNick = user.UserNick;
+            existingPet.Ruc = user.Ruc;
+            existingPet.Dni = user.Dni;
+            existingPet.Phone = user.Phone;
+            existingPet.Email = user.Email;
+            existingPet.LastName = user.LastName;
+            existingPet.UrlToImageBackground = user.UrlToImageBackground;
+            existingPet.UrlToImageProfile = user.UrlToImageProfile;
+            existingPet.DistrictId = user.DistrictId;
+
+            try
+            {
+                _userRepository.UpdateUser(existingPet);
+                await _unitOfWork.CompleteAsync();
+                return new UserResponse(existingPet);
+            }
+            catch (Exception e)
+            {
+                return new UserResponse($"An error occurred while saving Category: {e.Message}");
+            }
+        }
         
     }
 }

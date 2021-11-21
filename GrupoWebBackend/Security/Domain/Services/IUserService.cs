@@ -13,5 +13,7 @@ namespace GrupoWebBackend.Security.Domain.Services
         Task RegisterAsync(RegisterRequest request);
         Task UpdateAsync(int id, UpdateRequest request);
         Task DeleteAsync(int id);
+
+        Task<UserResponse> UpdateUser(User user, int id);
     }
 }

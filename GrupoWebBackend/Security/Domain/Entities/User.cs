@@ -20,6 +20,8 @@ namespace GrupoWebBackend.Security.Domain.Entities
         public string Phone { get; set; }
         public string Email { get; set; }
         
+        public string UrlToImageBackground { get; set; }
+        public string UrlToImageProfile { get; set; }
         public int DistrictId { get; set; }
         
         public District District { get; set; }

@@ -13,6 +13,7 @@ namespace GrupoWebBackend.Security.Domain.Repositories
         public bool ExistsByUsername(string username);
         User FindById(int id);
         void Update(User user);
+        void UpdateUser(User user);
         void Remove(User user);
     }
 }

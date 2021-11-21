@@ -23,11 +23,12 @@ namespace GrupoWebBackend.DomainDistrict.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<DistrictResource>> ListAsync()
+        public Task<IEnumerable<District>> ListAsync()
         {
-            var resource = await _districtService.ListAsync();
-            var districts = _mapper.Map<IEnumerable<District>, IEnumerable<DistrictResource>>(resource);
-            return districts;
+            return _districtService.ListAsync();
+            // var resource = await _districtService.ListAsync();
+            // var districts = _mapper.Map<IEnumerable<District>, IEnumerable<DistrictResource>>(resource);
+            // return districts;
         }
 
         [HttpGet("{id:int}")]

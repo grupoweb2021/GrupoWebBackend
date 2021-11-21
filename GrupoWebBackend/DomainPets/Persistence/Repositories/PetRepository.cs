@@ -39,9 +39,9 @@ namespace GrupoWebBackend.DomainPets.Persistence.Repositories
             _context.Pets.Remove(pet);
         }
 
-        public IEnumerable<Pet> GetPet(string race, int age)
+        public IEnumerable<Pet> GetPet(int userId)
         {
-            return _context.Pets.Where(p => p.Race.Equals(race)).Where(p=>p.Age.Equals(age)).ToList();
+            return _context.Pets.Where(p => p.UserId.Equals(userId)).ToList();
         }
     }
 }
