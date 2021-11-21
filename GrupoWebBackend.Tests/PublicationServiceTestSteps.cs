@@ -88,5 +88,19 @@ namespace GrupoWebBackend.Tests
             _baseUri = new Uri($"https://localhost:{port}/api/v{version}/publications/{id}");
             _client = _factory.CreateClient(new WebApplicationFactoryClientOptions{BaseAddress = _baseUri});
         }
+        
+
+        [When(@"A get publications by user request is sent")]
+        public void WhenAGetPublicationsByUserRequestIsSent()
+        {
+            Response = _client.GetAsync(_baseUri).ConfigureAwait(false);
+        }
+
+        [Given(@"the endpoint https://localhost:(.*)/api/v(.*)/Users/(.*)/publications is available now")]
+        public void GivenTheEndpointHttpsLocalhostApiVUsersPublicationsIsAvailableNow(int port, int version, int id)
+        {
+            _baseUri = new Uri($"https://localhost:{port}/api/v{version}/Users/{id}/publications");
+            _client = _factory.CreateClient(new WebApplicationFactoryClientOptions{BaseAddress = _baseUri});
+        }
     }
 }

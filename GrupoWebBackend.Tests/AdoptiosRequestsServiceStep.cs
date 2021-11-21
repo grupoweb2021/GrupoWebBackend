@@ -86,5 +86,20 @@ namespace GrupoWebBackend.Tests
         public void WhenAnADeleteRequestOfAdoptionsRequestsIsSent(Table table)
         {
                  }
+
+        [Given(@"the endpoint https://localhost:(.*)/api/v(.*)/AdoptionsRequests/(.*) is available")]
+        public void GivenTheEndpointHttpsLocalhostApiVAdoptionsRequestsIsAvailable(int port, int version, int id)
+        {
+            _baseUri = new Uri($"https://localhost:{port}/api/v{version}/AdoptionsRequests/{id}");
+            _client = _factory.CreateClient(new WebApplicationFactoryClientOptions{BaseAddress = _baseUri});
+        }
+
+        [When(@"An update  adoption request is sent")]
+        public void WhenAnUpdateAdoptionRequestIsSent(Table table)
+        {
+            var resource = table.CreateSet<SaveAdoptionsRequestsResource>().First();
+            var content = new StringContent(resource.ToJson(), Encoding.UTF8, "application/json");
+            Response = _client.PutAsync(_baseUri, content);
+        }
     }
 }

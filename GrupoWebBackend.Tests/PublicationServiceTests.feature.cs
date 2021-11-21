@@ -123,18 +123,18 @@ namespace GrupoWebBackend.Tests
 #line 5
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                             "PetId",
                             "UserId",
                             "DateTime",
                             "Comment"});
-                table12.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "1",
                             "4",
                             "29/09/2021 16:20",
                             "This is a test comment"});
 #line 10
-        testRunner.When("A publication is sent", ((string)(null)), table12, "When ");
+        testRunner.When("A publication is sent", ((string)(null)), table14, "When ");
 #line hidden
 #line 13
         testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -174,18 +174,18 @@ namespace GrupoWebBackend.Tests
 #line 5
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                             "petId",
                             "userId",
                             "dateTime",
                             "conment"});
-                table13.AddRow(new string[] {
+                table15.AddRow(new string[] {
                             "1",
                             "1",
                             "29/09/2021 16:20",
                             "This is a test comment"});
 #line 16
-        testRunner.When("A publication is sent", ((string)(null)), table13, "When ");
+        testRunner.When("A publication is sent", ((string)(null)), table15, "When ");
 #line hidden
 #line 19
         testRunner.Then("a response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -228,18 +228,18 @@ namespace GrupoWebBackend.Tests
 #line 22
         testRunner.Given("the endpoint https://localhost:5001/api/v1/publications/2 is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "PetId",
                             "UserId",
                             "DateTime",
                             "Comment"});
-                table14.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "2",
                             "4",
                             "date updated",
                             "This is a test comment updated"});
 #line 23
-        testRunner.When("An update  publication is sent", ((string)(null)), table14, "When ");
+        testRunner.When("An update  publication is sent", ((string)(null)), table16, "When ");
 #line hidden
 #line 26
         testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -282,18 +282,18 @@ namespace GrupoWebBackend.Tests
 #line 29
         testRunner.Given("the endpoint https://localhost:5001/api/v1/publications/1 is not available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                             "PetId",
                             "UserId",
                             "DateTime",
                             "Comment"});
-                table15.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "2",
                             "0",
                             "date updated",
                             "This is a test comment updated"});
 #line 30
-        testRunner.When("An update  publication is sent", ((string)(null)), table15, "When ");
+        testRunner.When("An update  publication is sent", ((string)(null)), table17, "When ");
 #line hidden
 #line 33
         testRunner.Then("a response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -385,6 +385,50 @@ namespace GrupoWebBackend.Tests
 #line hidden
 #line 43
         testRunner.Then("a response with status 400 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Get all current publications as a vet")]
+        [Xunit.TraitAttribute("FeatureTitle", "PublicationServiceTests")]
+        [Xunit.TraitAttribute("Description", "Get all current publications as a vet")]
+        public virtual void GetAllCurrentPublicationsAsAVet()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get all current publications as a vet", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 45
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+    this.FeatureBackground();
+#line hidden
+#line 46
+        testRunner.Given("the endpoint https://localhost:5001/api/v1/Users/3/publications is available now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 47
+        testRunner.When("A get publications by user request is sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 48
+        testRunner.Then("a response with status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

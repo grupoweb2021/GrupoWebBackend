@@ -29,3 +29,13 @@ Scenario: Add Adoption Request with same data
           | Message | Status  | UserIdFrom | UserId | PublicationId |
           | hello   | pending | 2          |2       |18              |
         Then a response with status 400 is received
+    
+       Scenario: Database update its information when there is a new candidate for adopting
+	  Given the endpoint https://localhost:5001/api/v1/AdoptionsRequests/1 is available
+	       And A User is already stored for AdoptionsRequests
+	         | Id | Type | UserNick | Pass     | Ruc      | Dni      | Phone     | Email             | Name      | LastName | DistrictId |
+	         | 2  | client  | an    | Password | A12345rf | 70258688 | 946401234 |ana@gmail.com | Ana | Araoz | 1          |
+	  When An update  adoption request is sent    
+	    | Message | Status  | UserIdFrom | UserId | PublicationId |
+	    | hello   | pending | 2          |1       |1              |
+	       Then a response with status 200 is received
