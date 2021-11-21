@@ -15,7 +15,6 @@ namespace GrupoWebBackend.DomainPets.Resources
         public int Age { get; set; }
         [Required]
         public string Race {get; set; }
-        [Required]
         public bool IsAdopted {get; set; }
         [Required]
         public int UserId { get; set; }
@@ -23,7 +22,6 @@ namespace GrupoWebBackend.DomainPets.Resources
         public int? PublicationId { get; set; }
         
         public bool IsPublished { get; set; } = false;
-        [Required]
         public string Gender { get; set; }
         public string UrlToImage { get; set; }
     }

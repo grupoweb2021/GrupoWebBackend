@@ -70,7 +70,7 @@ namespace GrupoWebBackend.Shared.Persistence.Context
             builder.Entity<Pet>().Property(p => p.IsAdopted).IsRequired();
             builder.Entity<Pet>().Property(p => p.PublicationId).IsRequired(false);
             builder.Entity<Pet>().Property(p => p.IsPublished).IsRequired();
-            builder.Entity<Pet>().Property(p => p.Gender).IsRequired();
+            builder.Entity<Pet>().Property(p => p.Gender).IsRequired(false);
             builder.Entity<Pet>().Property(p => p.UrlToImage).IsRequired(false);
             //Advertisement Constraints
             builder.Entity<Advertisement>().ToTable("Advertisements");
