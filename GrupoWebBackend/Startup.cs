@@ -36,6 +36,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using GrupoWebBackend.Shared.Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace GrupoWebBackend
@@ -62,7 +63,10 @@ namespace GrupoWebBackend
             
             // Configure AppSettings object 
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
-            
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseInMemoryDatabase("GrupoWebBackend-api-in-memory");
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "GrupoWebBackend", Version = "v1"});
