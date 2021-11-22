@@ -17,11 +17,6 @@ namespace GrupoWebBackend.Shared.Persistence.Context
         {
             _configuration = configuration;
         }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder builder)
-        {
-            builder.UseMySQL(_configuration.GetConnectionString("DefaultConnection"));
-        }
         
         public DbSet<Pet> Pets { get; set; }
         public DbSet<User> Users { get; set; }
