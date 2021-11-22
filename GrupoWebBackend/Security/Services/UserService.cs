@@ -136,25 +136,26 @@ namespace GrupoWebBackend.Security.Services
 
         public async Task<UserResponse> UpdateUser(User user, int id)
         {
-            var existingPet = await _userRepository.FindByIdAsync(id);
-            if (existingPet == null)
+            var existingUser = await _userRepository.FindByIdAsync(id);
+            if (existingUser == null)
                 return new UserResponse("Pet not found");
-            existingPet.Type = user.Type;
-            existingPet.UserNick = user.UserNick;
-            existingPet.Ruc = user.Ruc;
-            existingPet.Dni = user.Dni;
-            existingPet.Phone = user.Phone;
-            existingPet.Email = user.Email;
-            existingPet.LastName = user.LastName;
-            existingPet.UrlToImageBackground = user.UrlToImageBackground;
-            existingPet.UrlToImageProfile = user.UrlToImageProfile;
-            existingPet.DistrictId = user.DistrictId;
+            existingUser.Type = user.Type;
+            existingUser.UserNick = user.UserNick;
+            existingUser.Name = user.Name;
+            existingUser.Ruc = user.Ruc;
+            existingUser.Dni = user.Dni;
+            existingUser.Phone = user.Phone;
+            existingUser.Email = user.Email;
+            existingUser.LastName = user.LastName;
+            existingUser.UrlToImageBackground = user.UrlToImageBackground;
+            existingUser.UrlToImageProfile = user.UrlToImageProfile;
+            existingUser.DistrictId = user.DistrictId;
 
             try
             {
-                _userRepository.UpdateUser(existingPet);
+                _userRepository.UpdateUser(existingUser);
                 await _unitOfWork.CompleteAsync();
-                return new UserResponse(existingPet);
+                return new UserResponse(existingUser);
             }
             catch (Exception e)
             {

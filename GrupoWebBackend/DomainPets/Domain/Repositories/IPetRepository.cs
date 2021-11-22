@@ -16,6 +16,12 @@ namespace GrupoWebBackend.DomainPets.Domain.Repositories
         void Delete(Pet pet);
         IEnumerable<Pet> GetPet(int userId);
         
-        
+        Task<IEnumerable<Pet>> ListPublicationsGender(string gender);
+        Task<IEnumerable<Pet>> ListPublicationsType(string type);
+        Task<IEnumerable<Pet>> ListPublicationsAttention(string attention);
+        Task<IEnumerable<Pet>> ListPublicationsGenderAttention(string gender, string attention);
+        Task<IEnumerable<Pet>> ListPublicationsTypeAttention(string type, string attention);
+        Task<IEnumerable<Pet>> ListPublicationsTypeGender(string type, string gender);
+        Task<IEnumerable<Pet>> ListPublicationsTypeGenderAttention(string type, string gender, string attention);
     }
 }

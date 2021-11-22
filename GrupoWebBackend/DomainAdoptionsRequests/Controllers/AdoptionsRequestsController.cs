@@ -47,9 +47,11 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Controllers
 
             var adoptionRequestResource = _mapper.Map<AdoptionsRequests, AdoptionsRequestsResource>(result.AdoptionsRequests);
             return Ok(adoptionRequestResource);
-            
-            
         }
+        
+        
+        
+        
         
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(int id, [FromBody] SaveAdoptionsRequestsResource resource)
@@ -71,12 +73,10 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Controllers
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var result = await _adoptionsRequestsService.DeleteAsync(id);
-
             if (!result.Success)
                 return BadRequest(result.Message);
             var adoptionRequestResource = _mapper.Map<AdoptionsRequests, AdoptionsRequestsResource>(result.Resource);
             return Ok(adoptionRequestResource);
-
         }
 
         [HttpGet("userIdFrom={useridfrom}")]
@@ -88,7 +88,7 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Controllers
         
         [HttpGet("userIdAt={useridat}")]
         public async Task<IEnumerable<AdoptionsRequests>> GetbyIdAt(int useridat)
-        {
+        {   
             var result = await _adoptionsRequestsService.getAllUserAt(useridat);
             return result;
         }

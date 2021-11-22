@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using GrupoWebBackend.DomainPets.Domain.Models;
 using GrupoWebBackend.DomainPets.Domain.Repositories;
 using GrupoWebBackend.DomainPets.Domain.Services.Communications;
+using GrupoWebBackend.DomainPublications.Domain.Models;
 using GrupoWebBackend.Shared.Persistence.Context;
 using GrupoWebBackend.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -42,6 +43,47 @@ namespace GrupoWebBackend.DomainPets.Persistence.Repositories
         public IEnumerable<Pet> GetPet(int userId)
         {
             return _context.Pets.Where(p => p.UserId.Equals(userId)).ToList();
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsGender(string gender)
+        {
+            return await _context.Pets.Where(p => p.Gender == gender).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsType(string type)
+        {
+            return await _context.Pets.Where(p => p.Type == type).ToListAsync();
+
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsAttention(string attention)
+        {
+            return await _context.Pets.Where(p => p.Attention == attention).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsGenderAttention(string gender, string attention)
+        {
+            return await _context.Pets.Where(p => p.Gender == gender).
+                Where(p => p.Attention == attention).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsTypeAttention(string type, string attention)
+        {
+            return await _context.Pets.Where(p => p.Type == type).
+                Where(p => p.Attention == attention).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsTypeGender(string type, string gender)
+        {
+            return await _context.Pets.Where(p => p.Type == type).
+                Where(p => p.Gender == gender).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsTypeGenderAttention(string type, string gender, string attention)
+        {
+            return await _context.Pets.Where(p => p.Type == type).
+                Where(p => p.Gender == gender).
+                Where(p => p.Attention == attention).ToListAsync();
         }
     }
 }

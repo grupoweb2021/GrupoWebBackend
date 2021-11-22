@@ -49,5 +49,9 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Persistence.Repositories
         public async Task<IEnumerable<AdoptionsRequests>> getAllUserFromNotifications(int id)
         {
             return  _context.AdoptionsRequests.Where(e=>e.UserIdFrom==id);        }
-        }
+
+
+    }
+    
+        
 }

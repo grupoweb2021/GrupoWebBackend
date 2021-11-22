@@ -72,8 +72,16 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Services
           existingAdoptionsRequests.UserIdAt = adoptionsRequest.UserIdAt;
           existingAdoptionsRequests.PublicationId = adoptionsRequest.PublicationId;
 
-          _requestsAdoptionsRepository.Update(existingAdoptionsRequests);
-          return new AdoptionsRequestsResponse(existingAdoptionsRequests);
+          try
+          {
+              _requestsAdoptionsRepository.Update(existingAdoptionsRequests);
+              await _unitOfWork.CompleteAsync();
+              return new AdoptionsRequestsResponse(existingAdoptionsRequests);
+          }
+          catch (Exception e)
+          {
+              return new AdoptionsRequestsResponse($"An error occurred while saving AdoptionsRequests: {e.Message}");
+          }
       }
 
       public async Task<IEnumerable<AdoptionsRequests>> getAllUserAt(int id)

@@ -19,5 +19,7 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Domain.Services
         Task<IEnumerable<AdoptionsRequests>> getAllUserAt(int id);
         
         Task<IEnumerable<AdoptionsRequests>> getAllUserFrom(int id);
+        
+
     }
 }

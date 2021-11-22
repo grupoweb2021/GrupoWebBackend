@@ -9,20 +9,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0946c3-99d2-4862-9b43-d9f983b1f871" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Resources/PublicationFilter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GrupoWebBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/bin/Debug/net5.0/GrupoWebBackend.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/bin/Debug/net5.0/GrupoWebBackend.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/Debug/net5.0/GrupoWebBackend.Tests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend.Tests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Resources/SavePetResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Resources/SavePetResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Shared/Persistence/Context/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Shared/Persistence/Context/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Controllers/AdoptionsRequestsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Controllers/AdoptionsRequestsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Domain/Repositories/IAdoptionsRequestsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Domain/Repositories/IAdoptionsRequestsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Domain/Services/IAdoptionsRequestsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Domain/Services/IAdoptionsRequestsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Persistence/Repositories/AdoptionsRequestsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Persistence/Repositories/AdoptionsRequestsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Services/AdoptionsRequestsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainAdoptionsRequests/Services/AdoptionsRequestsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Controllers/PetsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Controllers/PetsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Repositories/IPetRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Repositories/IPetRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Services/IPetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Domain/Services/IPetService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Persistence/Repositories/PetRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Persistence/Repositories/PetRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/PetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPets/Services/PetService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Domain/Repositories/IPublicationRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Domain/Repositories/IPublicationRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Domain/Services/IPublicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Domain/Services/IPublicationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Persistence/Repositories/PublicationRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Persistence/Repositories/PublicationRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Services/PublicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/DomainPublications/Services/PublicationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Security/Domain/Services/Communication/RegisterRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Domain/Services/Communication/RegisterRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/Security/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/Security/Services/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/GrupoWebBackend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/ref/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/bin/Debug/net5.0/ref/GrupoWebBackend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/GrupoWebBackend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/ref/GrupoWebBackend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/Debug/net5.0/ref/GrupoWebBackend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrupoWebBackend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GrupoWebBackend/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global.json" beforeDir="false" afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +159,7 @@
       <workItem from="1637509393455" duration="2905000" />
       <workItem from="1637516002479" duration="26000" />
       <workItem from="1637518208824" duration="2391000" />
+      <workItem from="1637529199336" duration="14036000" />
     </task>
     <servers />
   </component>
