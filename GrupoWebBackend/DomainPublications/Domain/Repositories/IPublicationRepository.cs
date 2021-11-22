@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using GrupoWebBackend.DomainPublications.Domain.Models;
+using GrupoWebBackend.DomainPublications.Resources;
 
 namespace GrupoWebBackend.DomainPublications.Domain.Repositories
 {
@@ -12,5 +13,9 @@ namespace GrupoWebBackend.DomainPublications.Domain.Repositories
         void Update(Publication publication);
         void Remove(Publication publication);
         Task<IEnumerable<Publication>> FindByUserId(int userId);
+        
+
+
+
     }
 }

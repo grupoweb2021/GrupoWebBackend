@@ -98,6 +98,45 @@ namespace GrupoWebBackend.DomainPets.Services
                 return new PetResponse($"An error occurred while deleting the pet: {e.Message}");
             }
         }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsGender(string gender)
+        {
+            return await _petRepository.ListPublicationsGender(gender);
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsType(string type)
+        {
+            return await _petRepository.ListPublicationsType(type);
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsAttention(string attention)
+        {
+            return await _petRepository.ListPublicationsAttention(attention);
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsGenderAttention(string gender, string attention)
+        {
+            return await _petRepository.ListPublicationsGenderAttention(gender, attention);
+
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsTypeAttention(string type, string attention)
+        {
+            return await _petRepository.ListPublicationsTypeAttention(type, attention);
+
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsTypeGender(string type, string gender)
+        {
+            return await _petRepository.ListPublicationsTypeGender(type, gender);
+
+        }
+
+        public async Task<IEnumerable<Pet>> ListPublicationsTypeGenderAttention(string type, string gender, string attention)
+        {
+            return await _petRepository.ListPublicationsTypeGenderAttention(type, gender, attention);
+
+        }
     }
 }
 

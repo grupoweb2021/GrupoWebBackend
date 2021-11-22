@@ -30,7 +30,57 @@ namespace GrupoWebBackend.DomainPets.Controllers
             var pets = await _petService.ListAsync();
             return pets;
         }
+        
+        [HttpGet("gender={gender}")]
+        public async Task<IEnumerable<Pet>> ListPublicationsGender(string gender)
+        {
+            var pets = await _petService.ListPublicationsGender(gender);
+            return pets;
+        }
+        
+        [HttpGet("type={type}")]
+        public async Task<IEnumerable<Pet>> ListPublicationsType(string type)
+        {
+            var pets = await _petService.ListPublicationsType(type);
+            return pets;
+        }
+        
+        [HttpGet("attention={attention}")]
+        public async Task<IEnumerable<Pet>> ListPublicationsAttention(string attention)
+        {
+            var pets = await _petService.ListPublicationsAttention(attention);
+            return pets;
+        }
+        
+        [HttpGet("gender={gender}&attention={attention}")]
+        public async Task<IEnumerable<Pet>> ListPublicationsGenderAttention( string gender, string attention)
+        {
+            var pets = await _petService.ListPublicationsGenderAttention(gender, attention);
+            return pets;
+        }
+        
+        [HttpGet("type={type}&attention={attention}")]
+        public async Task<IEnumerable<Pet>> ListPublicationsTypeAttention(string type, string attention)
+        {
+            var pets = await _petService.ListPublicationsTypeAttention(type, attention);
+            return pets;
+        }
 
+        [HttpGet("type={type}&gender={gender}")]
+        public async Task<IEnumerable<Pet>> ListPublicationsTypeGender(string type, string gender)
+        {
+            var pets = await _petService.ListPublicationsTypeGender(type, gender);
+            return pets;
+        }
+        
+        [HttpGet("type={type}&gender={gender}&attention={attention}")]
+        public async Task<IEnumerable<Pet>> ListPublicationsTypeGenderAttention(string type, string gender, string attention )
+        {
+            var pets = await _petService.ListPublicationsTypeGenderAttention(type, gender, attention);
+            return pets;
+        }
+       
+        
         [HttpGet("{id:int}")]
         public async Task<Pet> FindAsync(int id)
         {
@@ -88,6 +138,10 @@ namespace GrupoWebBackend.DomainPets.Controllers
             var petResourceResource = _mapper.Map<Pet, PetResource>(result.Resource);
             return Ok(petResourceResource);
         }
+        
+        
+        
+        
 
     }
 }

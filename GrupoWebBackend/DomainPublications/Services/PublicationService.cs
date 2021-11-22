@@ -6,6 +6,7 @@ using GrupoWebBackend.DomainPublications.Domain.Models;
 using GrupoWebBackend.DomainPublications.Domain.Repositories;
 using GrupoWebBackend.DomainPublications.Domain.Services;
 using GrupoWebBackend.DomainPublications.Domain.Services.Communications;
+using GrupoWebBackend.DomainPublications.Resources;
 using GrupoWebBackend.Shared.Domain.Repositories;
 
 namespace GrupoWebBackend.DomainPublications.Services
@@ -91,5 +92,6 @@ namespace GrupoWebBackend.DomainPublications.Services
                 return new PublicationResponse($"An error occurred while deleting the publication: {e.Message}");
             }
         }
+        
     }
 }

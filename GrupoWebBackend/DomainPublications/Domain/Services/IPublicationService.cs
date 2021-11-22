@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using GrupoWebBackend.DomainPublications.Domain.Models;
 using GrupoWebBackend.DomainPublications.Domain.Services.Communications;
+using GrupoWebBackend.DomainPublications.Resources;
 
 namespace GrupoWebBackend.DomainPublications.Domain.Services
 {
@@ -12,5 +13,6 @@ namespace GrupoWebBackend.DomainPublications.Domain.Services
         Task<PublicationResponse> SaveAsync(Publication publication);
         Task<PublicationResponse> UpdateAsync(int id, Publication publication);
         Task<PublicationResponse> DeleteAsync(int id);
+
     }
 }

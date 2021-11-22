@@ -3,9 +3,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using GrupoWebBackend.DomainPublications.Domain.Models;
 using GrupoWebBackend.DomainPublications.Domain.Repositories;
+using GrupoWebBackend.DomainPublications.Resources;
 using GrupoWebBackend.Shared.Persistence.Context;
 using GrupoWebBackend.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace GrupoWebBackend.DomainPublications.Persistence.Repositories
 {

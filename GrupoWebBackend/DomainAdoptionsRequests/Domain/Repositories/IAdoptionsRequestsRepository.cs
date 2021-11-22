@@ -21,6 +21,7 @@ namespace GrupoWebBackend.DomainAdoptionsRequests.Domain.Repositories
         Task<IEnumerable<AdoptionsRequests>> getAllUserFromNotifications(int id);
 
         // Task<IEnumerable<AdoptionsRequests>> FindByAdoptionsRequests(int adoptionsRequestsId);
-
+        
+        
     }
 }
